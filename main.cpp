@@ -6,11 +6,10 @@ using namespace std;
 const long long pageSize = 4096;
 const long long MEM_SIZE =131072;
 const long long TOTAL_FRAMES= (MEM_SIZE / pageSize);//32 Frames
-struct PageTableEntry {
-    int frame_number;  // The output value (e.g., 12)
-    bool is_valid;     // Is this mapping active? (true/false)
-};
-struct PageTableEntry my_page_table[1000];
+const int MAX_VIRTUAL_PAGES = 1000;
+
+
+
 typedef struct{
     int fram[TOTAL_FRAMES];
    int top;
@@ -18,7 +17,8 @@ typedef struct{
 void init_free_list(freeList*list){
     list->top=-1;
     for (int i = 0; i < TOTAL_FRAMES; ++i) {
-        list->fram[list->top++]=i;
+        list->top++;
+        list->fram[list->top]=i;
     }
 }
 int allocate_frame(freeList*list){
@@ -33,7 +33,16 @@ void free_frame(freeList*list,int frameNumber){
     list->fram[list->top]=frameNumber;
 }
 
-
+struct PageTableEntry {
+    int frame_number;  // The output value (e.g., 12)
+    bool is_valid;     // Is this mapping active? (true/false)
+};
+struct PageTableEntry my_page_table[MAX_VIRTUAL_PAGES];
+void init_page_table(){
+    for (int i = 0; i < MAX_VIRTUAL_PAGES; ++i) {
+        my_page_table[i].is_valid= false;
+    }
+}
 
 
 long long translation(string VirtualAddressHex){
@@ -66,7 +75,7 @@ int main() {
     cout << "your Virtual_address is: " << VA << "\n";
 
     long long page_number = Compute_page_number(VA);
-    assert(page_number < 1000 && "Segmentation Fault: Address out of bounds");
+    assert(page_number <MAX_VIRTUAL_PAGES && "Segmentation Fault: Address out of bounds");
     long long offset = Compute_offset(VA) ;
 
     int frame_number = page_number;           // identity mapping
