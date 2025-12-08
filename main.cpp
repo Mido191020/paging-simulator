@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cassert>
-
+#include <fstream> // Required for file I/O
 using namespace std;
 
 /* =========================
@@ -10,6 +10,7 @@ const long long pageSize = 4096;
 const long long MEM_SIZE = 131072;
 const long long TOTAL_FRAMES = (MEM_SIZE / pageSize); // 32 Frames
 const int MAX_VIRTUAL_PAGES = 1000;
+const int RAM_SIZE=MEM_SIZE;
 // Error Codes
 //const int SUCCESS = 1;          // Or we just return the frame number if >= 0
 const int ERR_SEG_FAULT = -1;   // Address out of bounds
@@ -21,7 +22,7 @@ string ERR_PAGE_FAULT_Message="Error: Page Fault (Page not in memory)\n";
    Free Frame List
 
 ========================= */
-
+unsigned char RAM[RAM_SIZE];
 
 typedef struct {
     int fram[TOTAL_FRAMES];
@@ -120,7 +121,46 @@ long long Compute_offset(long long VA) {
 long long Compute_PA(int frame_number, long long offset) {
     return (frame_number * pageSize) + offset;
 }
+long long Get_Physical_Address(long long VA){
 
+    long long page_number = Compute_page_number(VA);
+    long long offset      = Compute_offset(VA);
+    int frame_number      = Mapping_FrameWithPageTable(page_number);
+    if (frame_number<0){
+        if (frame_number==ERR_PAGE_FAULT){
+            cout<<ERR_PAGE_FAULT_Message;
+        }
+        if (frame_number==ERR_SEG_FAULT){
+            cout<<ERR_SEG_FAULT_Message;
+
+        }
+        return -1;
+
+    }
+    // Identity mapping
+    return Compute_PA(frame_number,offset);
+}
+
+void Store(long long VA, char data){
+    long long PA = Get_Physical_Address(VA);
+    if (PA != -1){
+//        cout << "[DEBUG] Calculated PA: " << PA << "\n"; // Checkpoint A
+
+//        cout << "[DEBUG] Accessing RAM at index " << PA << "...\n"; // Checkpoint B
+        RAM[PA] = data; // <--- The Suspect
+//        cout << "[DEBUG] Write Successful!\n"; // Checkpoint C
+
+        cout << "the " << data << " stored in " << PA << '\n';
+    }
+}
+char load(long long PA){
+    if (PA==-1){
+        cout<<"[DEBUG] Accessing RAM faliure ";
+    }
+    cout<<"[DEBUG] Accessing RAM at index "<<PA<<'\n';
+    cout<<"[DEBUG] load data from RAM"<<RAM[PA]<<'\n';
+    return RAM[PA];
+}
 /* =========================
    System Boot
 ========================= */
@@ -161,61 +201,96 @@ int main() {
     init_page_table();
     System_Boot();
 
-    do {
-        cout << "\n";
-        cout << "==================================\n";
-        cout << "   Virtual Address Translator\n";
-        cout << "   (Identity Mapping - 4KB pages)\n";
-        cout << "==================================\n";
-        cout << "1 - Enter a new virtual address\n";
-        cout << "0 - Exit\n";
-        cout << "Choice: ";
+    ofstream out("input.txt");
+    out << "0x1000\n"
+           "0x2000\n"
+           "0x1000\n"
+           "0x40A3\n"
+           "0x999999";
+    out.close();
 
-        int choice;
-        cin >> choice;
+    ifstream inputFile("input.txt");
+    if (!inputFile.is_open()) {
+        cerr << "Error opening file!" << endl;
+        return 1;
+    }
 
-        if (choice == 0) {
-            cout << "Goodbye!\n";
-            break;
-        }
+    string virtual_address_HEX;
 
-        if (choice != 1) {
-            cout << "Invalid option! Please enter 1 or 0.\n";
-            continue;
-        }
-
-        cout << "enter your virtual address (in hex): ";
-        string virtual_address_HEX;
-        cin >> virtual_address_HEX;
+// ✅ LOOP over all inputs
+    while (getline(inputFile, virtual_address_HEX)) {
 
         // Translate hex → integer
         long long VA = translation(virtual_address_HEX);
 
-        cout << "your Virtual_address is: " << VA << "\n";
+        cout << "Virtual Address: " << virtual_address_HEX << endl;
+        cout << "VA decimal: " << VA << endl;
 
-        long long page_number = Compute_page_number(VA);
-        long long offset      = Compute_offset(VA);
+        long long PA = Get_Physical_Address(VA);
 
-        int frame_number      = Mapping_FrameWithPageTable(page_number);
-        if (frame_number<0){
-            if (frame_number==ERR_PAGE_FAULT){
-                cout<<ERR_PAGE_FAULT_Message;
-            }
-            if (frame_number==ERR_SEG_FAULT){
-                cout<<ERR_SEG_FAULT_Message;
-            }
-            continue;
+        if (PA == -1) {
+            cout << "Invalid virtual address\n\n";
+            continue;   // ⬅️ Move to next input
         }
-        // Identity mapping
-        long long PA = Compute_PA(frame_number, offset);
 
-        cout << "Page number       : " << page_number << "\n";
-        cout << "Offset            : " << offset << "\n";
-        cout << "Physical Address  : 0x"
-             << hex << PA << dec
-             << "  (=" << PA << ")\n\n";
+        Store(VA, 'A');
+        char loading = load(PA);
 
-    } while (true);
+        cout << "Loaded value: " << loading << endl;
+        cout << "Physical Address: 0x" << hex << PA
+             << dec << " (= " << PA << ")\n\n";
+    }
+
+    inputFile.close();
+//    do {
+//        cout << "\n";
+//        cout << "==================================\n";
+//        cout << "   Virtual Address Translator\n";
+//        cout << "   (Identity Mapping - 4KB pages)\n";
+//        cout << "==================================\n";
+//        cout << "1 - Enter a new virtual address\n";
+//        cout << "0 - Exit\n";
+//        cout << "Choice: ";
+//
+//        int choice;
+//        cin >> choice;
+//
+//        if (choice == 0) {
+//            cout << "Goodbye!\n";
+//            break;
+//        }
+//
+//        if (choice != 1) {
+//            cout << "Invalid option! Please enter 1 or 0.\n";
+//            continue;
+//        }
+//
+//        cout << "enter your virtual address (in hex): ";
+//
+//
+//        // Translate hex → integer
+//        long long VA = translation(virtual_address_HEX);
+//
+//        cout << "your Virtual_address is: " << VA << "\n";
+//        long long PA=Get_Physical_Address(VA);
+//        Store(VA,'A');
+//       char loding= load(PA);
+//       cout<<loding<<'\n';
+//        if (PA!=-1){
+//            cout << "Physical Address  : 0x" << hex << PA << dec << " (=" << PA << ")\n\n";
+//        }
+//
+//
+//
+////        cout << "Page number       : " << page_number << "\n";
+////        cout << "Offset            : " << offset << "\n";
+////        cout << "Physical Address  : 0x"
+////             << hex << PA << dec
+////             << "  (=" << PA << ")\n\n";
+//
+////             }
+//
+//    } while (true);
 
     return 0;
 }
