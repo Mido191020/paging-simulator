@@ -5,16 +5,24 @@
 using namespace std;
 
 /* =========================
-   Global Constants
-   ========================= */
+   Global Constants   ========================= */
 const long long pageSize = 4096;
 const long long MEM_SIZE = 131072;
 const long long TOTAL_FRAMES = (MEM_SIZE / pageSize); // 32 Frames
 const int MAX_VIRTUAL_PAGES = 1000;
+// Error Codes
+//const int SUCCESS = 1;          // Or we just return the frame number if >= 0
+const int ERR_SEG_FAULT = -1;   // Address out of bounds
+const int ERR_PAGE_FAULT = -2;  // Page not present
+string ERR_SEG_FAULT_Message="Error: Segmentation Fault (Address too high)\n";
+string ERR_PAGE_FAULT_Message="Error: Page Fault (Page not in memory)\n";
 
 /* =========================
    Free Frame List
-   ========================= */
+
+========================= */
+
+
 typedef struct {
     int fram[TOTAL_FRAMES];
     int top;
@@ -47,7 +55,7 @@ void free_frame(freeList* list, int frameNumber) {
 
 /* =========================
    Page Table
-   ========================= */
+========================= */
 struct PageTableEntry {
     long long frame_number; // physical frame number
     bool is_valid;          // valid / invalid
@@ -65,33 +73,20 @@ void init_page_table() {
 long long Mapping_FrameWithPageTable(long long page_number) {
     if (page_number > MAX_VIRTUAL_PAGES ){
         cout<<"Segmentation Fault: Address out of bounds";
-
-        return -1;
+        return ERR_SEG_FAULT;
     }
     if (my_page_table[page_number].is_valid == false){
         cout<< "Error: Page Fault (Page not mapped/present)";
-        return -1;
+        return ERR_PAGE_FAULT;
     }
-    assert(page_number < MAX_VIRTUAL_PAGES &&
-           "Segmentation Fault: Address out of bounds");
-
-    assert(my_page_table[page_number].is_valid == true &&
-           "Error: Page Fault (Page not mapped/present)");
 
     return my_page_table[page_number].frame_number;
 }
-
-void handel_Address_out_of_bounds(){
-
-}
+//Determine Cause of Fault
+//handel Address out of bounds
+//handel Page Fault (Page not mapped/present)
 bool Handle_Page_Fault(int page_number){
-    long long catch_error= Mapping_FrameWithPageTable(page_number);
-    if (catch_error==-1){
-        //check another frame or what?
 
-    } else{
-        return true;
-    }
 }
 
 
@@ -99,7 +94,7 @@ bool Handle_Page_Fault(int page_number){
 
 /* =========================
    Address Translation Helpers
-   ========================= */
+========================= */
 long long translation(string VirtualAddressHex) {
     return stoll(VirtualAddressHex, nullptr, 16);
 }
@@ -118,7 +113,7 @@ long long Compute_PA(int frame_number, long long offset) {
 
 /* =========================
    System Boot
-   ========================= */
+========================= */
 void System_Boot() {
     init_free_list(&physical_memory);
     init_page_table();
@@ -148,7 +143,7 @@ void menu() {
 
 /* =========================
    Main
-   ========================= */
+========================= */
 int main() {
 
     init_page_table();
@@ -188,8 +183,17 @@ int main() {
 
         long long page_number = Compute_page_number(VA);
         long long offset      = Compute_offset(VA);
-        int frame_number      = Mapping_FrameWithPageTable(page_number);
 
+        int frame_number      = Mapping_FrameWithPageTable(page_number);
+        if (frame_number<0){
+            if (frame_number==ERR_PAGE_FAULT){
+                cout<<ERR_PAGE_FAULT_Message;
+            }
+            if (frame_number==ERR_SEG_FAULT){
+                cout<<ERR_SEG_FAULT_Message;
+            }
+            continue;
+        }
         // Identity mapping
         long long PA = Compute_PA(frame_number, offset);
 
