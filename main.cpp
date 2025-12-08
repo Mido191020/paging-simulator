@@ -69,6 +69,17 @@ void init_page_table() {
         my_page_table[i].is_valid = false;
     }
 }
+bool Handle_Page_Fault(long long VPN){
+    cout<<"we are handling a fulat for  -> "<<VPN<<'\n';
+    int pfn= allocate_frame(&physical_memory);
+    if (pfn != -1) {
+        my_page_table[VPN].frame_number = pfn;
+        my_page_table[VPN].is_valid = true;
+        return true;
+    }
+    cout<<VPN <<"  -> Failed to map Page\n";
+    return false;
+}
 
 long long Mapping_FrameWithPageTable(long long page_number) {
     if (page_number > MAX_VIRTUAL_PAGES ){
@@ -76,8 +87,10 @@ long long Mapping_FrameWithPageTable(long long page_number) {
         return ERR_SEG_FAULT;
     }
     if (my_page_table[page_number].is_valid == false){
-        cout<< "Error: Page Fault (Page not mapped/present)";
-        return ERR_PAGE_FAULT;
+        bool fixed= Handle_Page_Fault(page_number);
+        if (!fixed){
+            return ERR_PAGE_FAULT;
+        }
     }
 
     return my_page_table[page_number].frame_number;
@@ -85,9 +98,6 @@ long long Mapping_FrameWithPageTable(long long page_number) {
 //Determine Cause of Fault
 //handel Address out of bounds
 //handel Page Fault (Page not mapped/present)
-bool Handle_Page_Fault(int page_number){
-
-}
 
 
 
@@ -118,24 +128,26 @@ void System_Boot() {
     init_free_list(&physical_memory);
     init_page_table();
 
-    // Map first 5 virtual pages
-    for (int i = 0; i < 5; ++i) {
-        int pfn = allocate_frame(&physical_memory);
+//    // Map first 5 virtual pages
+//    for (int i = 0; i < 5; ++i) {
+//        int pfn = allocate_frame(&physical_memory);
+//
+//        if (pfn != -1) {
+//            my_page_table[i].frame_number = pfn;
+//            my_page_table[i].is_valid = true;
+//
+//            cout << "  -> Mapped Virtual Page "
+//                 << i
+//                 << " to Physical Frame "
+//                 << pfn << "\n";
+//        } else {
+//            cout << "  -> Failed to map Page "
+//                 << i
+//                 << " (Out of Memory)\n";
+//        }
+//    }
 
-        if (pfn != -1) {
-            my_page_table[i].frame_number = pfn;
-            my_page_table[i].is_valid = true;
-
-            cout << "  -> Mapped Virtual Page "
-                 << i
-                 << " to Physical Frame "
-                 << pfn << "\n";
-        } else {
-            cout << "  -> Failed to map Page "
-                 << i
-                 << " (Out of Memory)\n";
-        }
-    }
+    cout << "System Booted with EMPTY memory (Testing Demand Paging).\n";
 }
 
 void menu() {
