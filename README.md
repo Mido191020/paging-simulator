@@ -13,11 +13,8 @@ built incrementally like a real operating system.
 - ✅ **[M3: Linear Demand Paging & RAM](./M3_Linear_Demand_Paging)** - *Completed (Includes Physical Memory & Page Fault Handler)*
 - 🚧 **M4: Multi-Level Page Tables** - *In Progress*
 - ⚡ **M5: TLB Simulation** - *Planned*
-- M6 — Web Visualization (Future Work) Status: Concept Only
-Goal:
--Provide an interactive visualization of the virtual memory system
--to improve debugging, learning, and intuition.
--Not required for completion.
+- 🌐 **M6: Web Visualization** - *Concept Only (Future Work)*
+  - *Goal: Interactive visualization to improve debugging and intuition.*
 
 ## Philosophy
 - OS-first thinking
