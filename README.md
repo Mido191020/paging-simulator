@@ -11,7 +11,7 @@ built incrementally like a real operating system.
 - ✅ **M1: Basic Paging** (Identity Mapping) - *Completed*
 - ✅ **M2: Big Page Table** (Linear Paging) - *Completed*
 - ✅ **[M3: Linear Demand Paging & RAM](./M3_Linear_Demand_Paging)** - *Completed (Includes Physical Memory & Page Fault Handler)*
-- 🚧 **M4: Multi-Level Page Tables** - *In Progress*
+- ✅ **[M4: Multi-Level Page Tables](./M4_MultiLevel_Paging)** - *Completed (Includes Directory/Table Hierarchy & Visualizer)*
 - ⚡ **M5: TLB Simulation** - *Planned*
 - 🌐 **M6: Web Visualization** - *Concept Only (Future Work)*
   - *Goal: Interactive visualization to improve debugging and intuition.*
