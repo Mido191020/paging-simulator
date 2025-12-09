@@ -2,6 +2,14 @@
 
 This is the fourth version of my Operating System simulator. In this milestone, I implemented **Multi-Level Paging** — the approach used by real systems (like x86) to handle memory efficiently, rather than using one huge page table.
 
+## 📖 Further Reading
+
+For a detailed explanation of the code, implementation choices, and how this virtual memory simulator works internally, read the full article:
+
+👉 [Building a Virtual Memory Simulator](https://midoxmax.hashnode.dev/building-a-virtual-memory-simulator)
+
+This article walks through the technical concepts and step-by-step development, making it easier to understand how everything comes together under the hood.
+
 ---
 
 ## 🚀 What I Built
