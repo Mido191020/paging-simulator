@@ -67,6 +67,63 @@ When you enter a virtual address, the simulator prints the full "tree walk":
 
 This makes the translation process visible step-by-step, instead of being a black box.
 
+#### 📋 Example Scenario: Before and After Allocation
+
+**Scenario 1: Inspecting an Unmapped Address**
+
+When you inspect address `0x1000` before storing anything:
+
+```
+Enter Address to Inspect (Hex): 0x1000
+   [VISUALIZER] Inspecting VA: 0x1000
+   ├── 1. Directory Index: 0
+   ├── [X] Directory Entry is NULL (Unmapped Region)
+   └── [Result] Page Fault would occur here.
+```
+
+The system shows that:
+- The Directory Index exists
+- But the Page Table hasn't been created yet
+- This address would trigger a **Page Fault** if accessed
+
+**Scenario 2: Store Data at the Address**
+
+Now store character `'A'` at address `0x1000`:
+
+```
+Enter Operation (W/R): W
+Enter Address (Hex): 0x1000
+Enter Value (Char): A
+Stored 'A' at Physical Address 0x1f000
+```
+
+The Page Fault Handler automatically:
+- Creates the missing Page Table
+- Allocates a physical frame (Frame #31)
+- Maps the virtual address to physical address `0x1f000`
+
+**Scenario 3: Inspect the Same Address Again**
+
+Now when you inspect `0x1000`:
+
+```
+Enter Address to Inspect (Hex): 0x1000
+   [VISUALIZER] Inspecting VA: 0x1000
+   ├── 1. Directory Index: 0
+   ├── [OK] Page Table Found.
+   ├── 2. Table Index: 1
+   ├── [OK] Frame Found (Valid Bit = 1).
+   └── 3. Physical Frame: 31 | Offset: 0
+       -> Physical Address: 0x1f000
+```
+
+Now the full translation path exists:
+- Directory Entry ✓ points to Page Table
+- Page Table Entry ✓ points to Physical Frame #31
+- Final physical address: `0x1f000`
+
+This demonstrates **lazy allocation** in action — memory structures are only created when needed.
+
 ---
 
 ## 🛠️ How to Run It
