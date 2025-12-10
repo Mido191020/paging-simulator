@@ -57,11 +57,6 @@ long long allocate_frame(freeList* list) {
 /* ===================================================
    SECTION 4: Multi-Level Paging Structures (M3 Design)
    =================================================== */
-
-
-
-
-
 struct PageTableEntry {
     long long frame_number;
     bool is_valid;
