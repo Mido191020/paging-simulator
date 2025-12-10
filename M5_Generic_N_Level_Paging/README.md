@@ -122,13 +122,4 @@ The code automatically adapts! 🎯
 
 ---
 
-## 🏆 Project Highlights
-
-✅ **Zero hardcoded levels** – fully generic design  
-✅ **Realistic x86-64 simulation** – matches Intel/AMD behavior  
-✅ **Educational visualizer** – see the MMU in action  
-✅ **Extensible** – add TLB caching, page replacement, etc.
-
----
-
 **Built with ❤️ by a Junior Systems Engineer.**
