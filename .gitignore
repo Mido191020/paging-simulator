@@ -1,1 +1,5 @@
 think.txt
+cmake-build-debug/
+main
+.DS_Store
+cmake-build-debug/
