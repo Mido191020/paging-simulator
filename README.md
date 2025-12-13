@@ -1,57 +1,21 @@
-# Advanced Paging Simulator
+# Paging Simulator
 
-> A high-performance, educational simulation of Operating System memory management, featuring Multi-Level and Inverted Page Table implementations.
+An educational OS project for understanding virtual memory and paging,
+built incrementally like a real operating system.
 
-## 📖 Overview
-This project simulates the hardware/software interface of an MMU (Memory Management Unit). Unlike simple allocators, this simulator handles complex virtual memory challenges including **hierarchical translation**, **demand paging**, and **page replacement policies**.
+## Project Structure
+- Code written incrementally per milestone.
+- **Archived Milestones:** Completed milestones are archived in their own folders for reference.
 
-It is designed to demonstrate deep systems knowledge:
-* **Virtualization:** Decoupling logical addresses from physical RAM.
-* **Optimization:** Comparing Linear vs. Multi-Level vs. Inverted tables.
-* **Algorithm Design:** Handling page faults and memory constraints efficiently.
+## Milestones
+- ✅ **M1: Basic Paging** (Identity Mapping) - *Completed*
+- ✅ **M2: Big Page Table** (Linear Paging) - *Completed*
+- ✅ **[M3: Linear Demand Paging & RAM](./M3_Linear_Demand_Paging)** - *Completed (Includes Physical Memory & Page Fault Handler)*
+- ✅ **[M4: Multi-Level Page Tables](./M4_MultiLevel_Paging)** - *Completed (Includes Directory/Table Hierarchy & Visualizer)*
+- ✅ **[M5: Generic N-Level Paging](./M5_Generic_N_Level_Paging)** - *Completed (64-bit Architecture & N-Level Logic)*
+- ✅ **[M6: Inverted Page Tables](./M6_Inverted_Page_Table)** - *Completed (Hash Map & Collision Handling)*
 
----
-
-## 🏗️ Repository Structure
-
-| Directory | Content |
-| :--- | :--- |
-| `milestones/` | Core implementations separated by complexity (M3 - M6). |
-| `src/` | Shared entry points and driver code. |
-| `inputs/` | Memory trace files used for simulation benchmarks. |
-| `docs/` | Technical documentation and architectural decisions. |
-
----
-
-## 🚀 Key Implementations
-
-### 1. Linear Demand Paging (M3)
-The foundational implementation using a direct array map. Simulates basic validity checks and physical frame allocation.
-
-### 2. Multi-Level Paging (M4 & M5)
-Implements a Page Directory structure to handle sparse address spaces. M5 generalizes this to **N-levels**, allowing dynamic configuration of the page table depth.
-
-### 3. Inverted Page Table (M6)
-A space-efficient approach that scales with physical memory rather than virtual address space, using hashing to map frames.
-
----
-
-## 🛠️ Usage
-
-To run a specific milestone simulation (e.g., M4):
-
-```bash
-cd milestones/M4_MultiLevel_Paging
-# Ensure your CMake or Compile command points to the input correctly
-./main ../../inputs/input.txt
-```
-
----
-
-## 📚 Documentation
-* [System Architecture](docs/architecture.md)
-* [Memory Theory & Concepts](docs/memory_concepts.md)
-* [Development Roadmap](docs/milestones.md)
-
----
-**License:** MIT
+## Philosophy
+- OS-first thinking
+- No shortcuts
+- Debuggable and explainable
