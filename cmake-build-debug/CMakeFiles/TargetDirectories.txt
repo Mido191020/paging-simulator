@@ -1,3 +1,0 @@
-D:/clion/paging/cmake-build-debug/CMakeFiles/paging.dir
-D:/clion/paging/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/clion/paging/cmake-build-debug/CMakeFiles/rebuild_cache.dir
