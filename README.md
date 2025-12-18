@@ -1,91 +1,107 @@
-# Paging Simulator (OS Memory Management)
+
+# 📄 Paging Simulator (OS Memory Management)
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Language](https://img.shields.io/badge/language-C%2B%2B-00599C.svg)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 ## 📖 Overview
-A modular Simulation of an Operating System's Memory Management Unit (MMU). This project demonstrates how modern kernels handle virtual memory, specifically focusing on **Paging**, **Address Translation**, and **Page Replacement Algorithms**.
 
-Currently active: **Milestone 3 (Least Recently Used - LRU)**.
+A **modular simulation** of an Operating System’s **Memory Management Unit (MMU)**.  
+This project demonstrates how modern kernels handle **virtual memory**, with a focus on:
+
+- Paging
+- Address Translation
+- Page Replacement Algorithms
+
+> **Current milestone:** **M3 – Least Recently Used (LRU)**
+
+---
 
 ## 🚀 Key Features
-- **Virtual Memory Simulation:** Maps virtual page numbers (VPN) to physical frames.
-- **Page Replacement Algorithms:**
-  - **LRU (Least Recently Used):** Accurate tracking of page usage with timestamps.
-  - *Future:* FIFO, Clock, Optimal.
-- **Visualizer:** Real-time console output showing hits, misses, and memory state.
-- **Trace Generation:** Simulates "Hot" and "Cold" memory access patterns.
+
+- **Virtual Memory Simulation**  
+  Maps Virtual Page Numbers (VPNs) to Physical Frames.
+
+- **Page Replacement Algorithms**
+  - ✅ **LRU (Least Recently Used)** using timestamp-based tracking
+  - 🔜 FIFO, Clock, Optimal
+
+- **Console Visualizer**  
+  Real-time output showing:
+  - Page hits
+  - Page misses
+  - Memory frame state
+
+- **Trace Generation**  
+  Simulates realistic memory access patterns:
+  - Hot pages
+  - Cold pages
+
+---
 
 ## 🛠️ Build & Run
 
 ### Prerequisites
-- C++ Compiler (GCC/Clang)
-- CMake (3.10+)
+
+- C++ Compiler (GCC or Clang)
+- CMake **3.10+**
 
 ### Quick Start
-```bash
-# 1. Clone and enter
-git clone [https://github.com/Mido191020/paging-simulator.git](https://github.com/Mido191020/paging-simulator.git)
+
+
+# Clone the repository
+git clone https://github.com/Mido191020/paging-simulator.git
 cd paging-simulator
 
-# 2. Build
+# Build the project
 cmake -S . -B build
 cmake --build build
 
-# 3. Run
+# Run the simulator
 ./build/paging_sim
-📂 Project Structure
-Plaintext
 
+
+
+## 📂 Project Structure
+
+```text
 paging-simulator/
-├── src/            # Source code (MMU logic, page tables)
+├── src/            # Core simulator logic (MMU, page tables, replacement)
 ├── docs/           # Technical documentation & architecture notes
-├── milestones/     # Archive of previous milestones (M1-M6)
+├── milestones/     # Archived milestones (M1–M6)
 ├── tests/          # Unit tests
-└── input.txt       # Generated memory trace files
-🧠 Architecture
-The simulator mimics a demand-paging system:
+└── input.txt       # Generated memory access traces
+```
 
-CPU Request: Generates a Virtual Address (VPN).
+---
 
-MMU Lookup: Checks the Page Table.
+## 🧠 Architecture
 
-Hit: Returns Frame Number instantly.
+The simulator models a **demand-paging system**:
 
-Miss:
+1. **CPU Request**
+   Generates a virtual address (VPN).
 
-Page Fault Handler wakes up.
+2. **MMU Lookup**
+   Checks the page table.
 
-Finds a free frame or selects a Victim (using LRU).
+3. **Hit**
+   Frame number is returned immediately.
 
-Updates mapping and resumes execution.
+4. **Miss (Page Fault)**
 
-🤝 Contributing
-Contributions are welcome! Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
+   * Page fault handler is invoked
+   * Free frame is used or a victim page is selected (LRU)
+   * Page table is updated
+   * Execution resumes
 
-📜 License
-This project is licensed under the MIT License - see the LICENSE file for details. EOF
+---
 
+## 🤝 Contributing
 
-### Step 2: Generate `CONTRIBUTING.md`
-Professional repos always tell others how to contribute.
+Contributions are welcome!
+Please read **`CONTRIBUTING.md`** for coding standards and pull request guidelines.
 
-```bash
-cat > CONTRIBUTING.md << 'EOF'
-# Contributing to Paging Simulator
+---
 
-Thank you for your interest in contributing!
-
-## How to Contribute
-1. **Fork** the repository.
-2. **Clone** your fork locally.
-3. Create a **Branch** for your feature (`git checkout -b feature/AmazingFeature`).
-4. **Commit** your changes.
-5. **Push** to the branch.
-6. Open a **Pull Request**.
-
-## Coding Standards
-- Use `src/` for all source code.
-- Keep functions small and focused.
-- Add comments for complex paging logic (especially around the LRU eviction).
