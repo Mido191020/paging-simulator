@@ -1,5 +1,24 @@
-think.txt
+# Build Directories
 cmake-build-debug/
+build/
+bin/
+obj/
+
+# IDE Files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Compiled Binaries
+*.exe
+*.out
+*.o
 main
-.DS_Store
-cmake-build-debug/
+simulator
+
+# Generated Files
+input.txt
+repo_analysis.txt
+think.txt
+analyze_repo.sh
