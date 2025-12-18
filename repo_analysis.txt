@@ -1,0 +1,2218 @@
+======================================
+PAGING SIMULATOR - REPOSITORY ANALYSIS
+======================================
+
+📁 Current directory:
+/mnt/d/clion/paging
+
+🔍 Git repository check:
+true
+
+📂 COMPLETE DIRECTORY TREE:
+-----------------------------------
+
+📂 ALTERNATIVE: Directory structure with find:
+-----------------------------------
+.
+./.git
+./.git/COMMIT_EDITMSG
+./.git/FETCH_HEAD
+./.git/HEAD
+./.git/ORIG_HEAD
+./.git/branches
+./.git/config
+./.git/description
+./.git/hooks
+./.git/hooks/applypatch-msg.sample
+./.git/hooks/commit-msg.sample
+./.git/hooks/fsmonitor-watchman.sample
+./.git/hooks/post-update.sample
+./.git/hooks/pre-applypatch.sample
+./.git/hooks/pre-commit.sample
+./.git/hooks/pre-merge-commit.sample
+./.git/hooks/pre-push.sample
+./.git/hooks/pre-rebase.sample
+./.git/hooks/pre-receive.sample
+./.git/hooks/prepare-commit-msg.sample
+./.git/hooks/push-to-checkout.sample
+./.git/hooks/update.sample
+./.git/index
+./.git/info
+./.git/info/exclude
+./.git/logs
+./.git/logs/HEAD
+./.git/logs/refs
+./.git/logs/refs/heads
+./.git/logs/refs/heads/m5-n-level-paging
+./.git/logs/refs/heads/m6-inverted-page-table
+./.git/logs/refs/heads/m7-tlb-simulation
+./.git/logs/refs/heads/main
+./.git/logs/refs/heads/refactor-structure
+./.git/logs/refs/remotes
+./.git/logs/refs/remotes/origin
+./.git/logs/refs/remotes/origin/m2-big-page-table
+./.git/logs/refs/remotes/origin/m3-physical-memory
+./.git/logs/refs/remotes/origin/m4-multilevel-paging
+./.git/logs/refs/remotes/origin/m5-n-level-paging
+./.git/logs/refs/remotes/origin/m6-inverted-page-table
+./.git/logs/refs/remotes/origin/m7-tlb-simulation
+./.git/logs/refs/remotes/origin/main
+./.git/logs/refs/remotes/origin/page-fault-handler
+./.git/objects
+./.git/objects/00
+./.git/objects/00/5cfe5277f7c480881bd3528b0e82d63a781637
+./.git/objects/03
+./.git/objects/03/43c52b8614de780c939b163de2dda12414b195
+./.git/objects/06
+./.git/objects/06/0ff08fdc24a2a4e277b5867be54cd878354245
+./.git/objects/06/f6363ffd5e8095ee8cc41b45966ce0c817d370
+./.git/objects/07
+./.git/objects/07/d50fc74218037b6cba68f9eb315e5f16a987c7
+./.git/objects/08
+./.git/objects/08/1bad6fa92fb82bffbef17b0a2b80f06a8a2ef2
+./.git/objects/09
+./.git/objects/09/2439ad6ad9df9b52dc9c1d70c6954fb6c069d3
+./.git/objects/0e
+./.git/objects/0e/924cb1cfe3f1709b19b2b98d282d27d255b01e
+./.git/objects/10
+./.git/objects/10/146e9298119c1bd114e232616295b1540737fe
+./.git/objects/12
+./.git/objects/12/cba1778df2e65d9a6ee4c32700acbaf3314229
+./.git/objects/15
+./.git/objects/15/4a7795593b0f85503f300b046cb008f7cc47b2
+./.git/objects/15/fa57e7f6d3cd5713978f1354c794fc200c86d1
+./.git/objects/17
+./.git/objects/17/67ac7bbc592423429ca822dc66a814c1fb2776
+./.git/objects/1b
+./.git/objects/1b/310608e565268fdde4c9b78473f109a509c88d
+./.git/objects/1b/a63554772db6ce5d840bb82b032e09a72f7ed7
+./.git/objects/1c
+./.git/objects/1c/2fda565b94d0f2b94cb65ba7cca866e7a25478
+./.git/objects/1e
+./.git/objects/1e/15c8c8ee2d9026a381856a8a00aed3acf9be35
+./.git/objects/1e/417c76fa2057092c8f1b75135123543badc21c
+./.git/objects/22
+./.git/objects/22/6f570be86409a335859d3c5ced451b14461194
+./.git/objects/26
+./.git/objects/26/74a8bf4803be3af1005c5049ac09c454a522d7
+./.git/objects/26/ecb5f267b6475fd9b66ad922ceb5de0b033673
+./.git/objects/27
+./.git/objects/27/09c67935902686b9be6ac088258eaf2e9bc2f8
+./.git/objects/27/e7496bf7261c022c55a618d64d24e6e9bc4264
+./.git/objects/27/f7b3079b19b58f6fdbb108251c125f78b7d707
+./.git/objects/28
+./.git/objects/28/84fe292ceb5b240661204de3dc8b62ab037cd3
+./.git/objects/2a
+./.git/objects/2a/2580d95acb0a8641739cb891b4b4b06b3952b9
+./.git/objects/2b
+./.git/objects/2b/0f6ad7f55797693f873b9a92cf6baf4a42639e
+./.git/objects/2c
+./.git/objects/2c/07da44810f54d2f51cc9ea23d2b2b5e4167139
+./.git/objects/2f
+./.git/objects/2f/62d82cdfa7fe0978d628978dbfc77094994530
+./.git/objects/30
+./.git/objects/30/3f84790250cf89a0b9f26270a72e4e42063da2
+./.git/objects/30/9ceced17acd1b123bfaf018544d6c9de7377f2
+./.git/objects/32
+./.git/objects/32/68ad35522db44f322a0f89defd060b0a67ed1d
+./.git/objects/34
+./.git/objects/34/fc5a21e53bb5d673999088bc0eeff0b975204c
+./.git/objects/36
+./.git/objects/36/486ae85a245a4a67dd7bd80bb6ab955c544586
+./.git/objects/38
+./.git/objects/38/7cfbf7fe42a8193745e80dc8a73ced1f6dc570
+./.git/objects/3e
+./.git/objects/3e/f82c8ffdb4a0e210ed6a26c432be02512d5c1f
+./.git/objects/3f
+./.git/objects/3f/00abe79066ba0e755c073b8b7663dba7cb1a29
+./.git/objects/3f/0c3c1c9e90a1bcc6fc2380aa174029c6987e3e
+./.git/objects/40
+./.git/objects/40/898ac903f44b46d3910d1eae95058d85764b7a
+./.git/objects/42
+./.git/objects/42/40e003cee205e25a8d9b04ef7ac60ef859a0b3
+./.git/objects/42/a87ba8c533d153af027cd10d924a3c29d154c5
+./.git/objects/43
+./.git/objects/43/b4a4f7f96224dfa14881d622a33b997352e86d
+./.git/objects/43/d035a55a92771797ce1fc9bcf47a69c5f8822c
+./.git/objects/45
+./.git/objects/45/5b61cc7e0e520b572b5888bb0b8e833595dfd8
+./.git/objects/45/8a85b354bbfda0aefa3942dba7c2be64e2fb79
+./.git/objects/47
+./.git/objects/47/724e04879373df1b10249ff17057ea13df201d
+./.git/objects/49
+./.git/objects/49/7d07df886b1def6c257aabd56bf2b7e7dafa4e
+./.git/objects/4a
+./.git/objects/4a/647a85f5351c10498b65334947f9d1179565a5
+./.git/objects/4a/85d7ec4580bac695d893b2152c901d4672e710
+./.git/objects/4a/f4a5116309a8c5b749d237669cd0f06c1619e1
+./.git/objects/4f
+./.git/objects/4f/2a1782bd27f0b6035d5d8182eb279d8a928e7f
+./.git/objects/4f/62bf952d1d343416c83f7567eb2fd9ff3ea8ff
+./.git/objects/4f/72876e9cd251a73f93bc0f94df203658113cb4
+./.git/objects/50
+./.git/objects/50/0580747aaead730a55d1dbccdb6b2c9863c0ca
+./.git/objects/50/c8ea6dd07eb841a1ac7f2660c99902840a771a
+./.git/objects/52
+./.git/objects/52/40ed7143f345c392b51ecb60baaefe8d40ea9a
+./.git/objects/53
+./.git/objects/53/6a9e63f19a5e05c2b2d179ba1f8868c10de170
+./.git/objects/53/8bd020eb01b673c2d540d1bb7c9abfd8add438
+./.git/objects/55
+./.git/objects/55/565a7be08e0c92559c10bb125aa883adcf5f85
+./.git/objects/55/abf0cda410aac334bba8c75fd2bc463d2dc126
+./.git/objects/56
+./.git/objects/56/c437b9b7acb76284e54ca56e02374aac6338f5
+./.git/objects/56/febea80a6b6e8f4b7fa73e4b071f94c59afaa0
+./.git/objects/59
+./.git/objects/59/447606da8fccf1310329bc7856e4bde071b5e8
+./.git/objects/5b
+./.git/objects/5b/6a36bc73785d2d5454dde838f6bcc8dad52230
+./.git/objects/5b/9d26a74fcc54144c3c607e4180e79d69fffbbe
+./.git/objects/5d
+./.git/objects/5d/cd1cdfd2914f838a5b3c2f44f950634dc38d39
+./.git/objects/5e
+./.git/objects/5e/2e645c1ae124da3b5a8115646bb359d3403449
+./.git/objects/5e/fff8a0e693f1a49c8e332598a49a49d570e9d8
+./.git/objects/5f
+./.git/objects/5f/c7c39b150cd1fae977796116a3573dbbddbb46
+./.git/objects/60
+./.git/objects/60/aa4ecc1307039429f23e977fbd3c3381a4f8e6
+./.git/objects/61
+./.git/objects/61/06b75e2be2e5e263a863ff14cb1c08fe647d28
+./.git/objects/61/5557617651dc6ad45071a4f493f78092a0959d
+./.git/objects/66
+./.git/objects/66/5bcc1a9796ee7288cd49b348288c4bee469e3e
+./.git/objects/68
+./.git/objects/68/47706638a473dc25d7cee1753ba609bedb7f51
+./.git/objects/6d
+./.git/objects/6d/70257c7f56df99c8ffcc63227f40c72739b064
+./.git/objects/6d/fb9dbe375735b48a4708c981dc806c8680b5ea
+./.git/objects/6f
+./.git/objects/6f/51ec2ca950c4c53b9251e6feb9ff3a0f67b8c9
+./.git/objects/6f/57b2bcdd1885a3f84167192c2874ef7d43fe61
+./.git/objects/71
+./.git/objects/71/43e87fd2f1344ad8a1bc89e3b316e98de19643
+./.git/objects/71/a0ae6359e8db3b3da87078f06c5ad2ee5e82e2
+./.git/objects/71/e6d9e0a9657dc5b87411316e717253c3154539
+./.git/objects/71/e9b79cdb4f1b252516fb87ee77c78a25181e23
+./.git/objects/72
+./.git/objects/72/c448e1d697cea2c9543cc662a9f8ad2c40583e
+./.git/objects/73
+./.git/objects/73/37a031376782021bb6970405d1ceeaeee28116
+./.git/objects/74
+./.git/objects/74/a31aa08adf5df3c338eb952c2254b8a39c9435
+./.git/objects/74/f91847f27b95637990e37164eb57de6a22fe36
+./.git/objects/75
+./.git/objects/75/6477b4cf3def512e6d9db1a0c79c3eb5134632
+./.git/objects/77
+./.git/objects/77/55f004c381fa3185017854b066d76a67deb4e8
+./.git/objects/7a
+./.git/objects/7a/62ff73b4c746eba0a4b800f407e9ef3970b9b7
+./.git/objects/7b
+./.git/objects/7b/2024014ad08096b285a9353c7b535931ae9048
+./.git/objects/7c
+./.git/objects/7c/d73e00e366f03cbf06bdcd90cf839834cc3ef9
+./.git/objects/7e
+./.git/objects/7e/7cac4a95651c3d9092c0647764662f8e40ebf9
+./.git/objects/7f
+./.git/objects/7f/1e898554aa4edc680f3b43bf47b2aa537186f3
+./.git/objects/7f/a382cc88d96d6772259942ba0f88dc0a6a6fba
+./.git/objects/80
+./.git/objects/80/b4f6609ee38bcdd0abcfc854c6b01ed9844854
+./.git/objects/81
+./.git/objects/81/a6fd3a765ffbb1b2633c6bce4f238d044d72bf
+./.git/objects/82
+./.git/objects/82/37a892d1ca534f9fca3063fb6ef1c70c9f71ef
+./.git/objects/86
+./.git/objects/86/16542084e70fc25ba47279814588e61b34f670
+./.git/objects/86/3fc7fa32c8fc3d31c106f7f49109263c74d19b
+./.git/objects/88
+./.git/objects/88/3120b3d26790a6bc3906be2a29e38282c9971c
+./.git/objects/8c
+./.git/objects/8c/69fb7fbbb212a33fb426ae7552a62f1b221f70
+./.git/objects/8c/9263729e73b0c26934e62e970506e125a0a08a
+./.git/objects/8c/b7a0b3bb67bff88d499423599d5d3666394b7c
+./.git/objects/8c/bbcf0d9d6566c118263c0e7455f996a2c8e641
+./.git/objects/8d
+./.git/objects/8d/602e2aa54e636ebe3aec6646b63adad78e2787
+./.git/objects/8d/63d59e2a1235ef19be578ee74b0247cd6a87e1
+./.git/objects/8e
+./.git/objects/8e/d58d9ad7dafac06a1d1fec199831b71c2a6065
+./.git/objects/91
+./.git/objects/91/6a4989a52007bac34a543e0c67ec5eb3010649
+./.git/objects/91/976252c4db0ab77f18f5de927406cc1e90a92e
+./.git/objects/94
+./.git/objects/94/a25f7f4cb416c083d265558da75d457237d671
+./.git/objects/96
+./.git/objects/96/61ac713428efbad557d3ba3a62216b5bb7d226
+./.git/objects/97
+./.git/objects/97/ad7552222ecbbb191426a986c914e6bd5c1675
+./.git/objects/97/f6fd69d48c8a97f293b6b55e67cd6eb6a3ec8b
+./.git/objects/98
+./.git/objects/98/144daeaf682e1dbd4af65eec1a0273bc9b313d
+./.git/objects/99
+./.git/objects/99/38610c103628489113d65515a4c26e391347b4
+./.git/objects/9c
+./.git/objects/9c/dbc2812fe153bb52c332dd8b9f9a325208361c
+./.git/objects/9f
+./.git/objects/9f/d60a4c5d9f104a59438c3ecb472af46d0d5c5e
+./.git/objects/a4
+./.git/objects/a4/332b1e285a607b25145eea92a756af838ecc90
+./.git/objects/a5
+./.git/objects/a5/6a32da86e82defbd5174c4a164725af01debfa
+./.git/objects/a6
+./.git/objects/a6/9c54d03f5534be09d1f3fd7f9d868eda61294d
+./.git/objects/a8
+./.git/objects/a8/9998da40fe431e32b8732b796b46854184d7b6
+./.git/objects/aa
+./.git/objects/aa/1aa981aefb96ed252fb7dd746ec45c424e6e88
+./.git/objects/aa/daacd05902f597cb7a554119dfc9986a637752
+./.git/objects/ac
+./.git/objects/ac/8e298adf180dc14e32702600c0737af7e4a92c
+./.git/objects/ac/a1009c704702086f16449920f817b74044a219
+./.git/objects/ad
+./.git/objects/ad/17790f66f8fb6a193f9ef5160b38f33f393085
+./.git/objects/ae
+./.git/objects/ae/cfc8da9cdd26544dfe9654b8dabe5926e72c62
+./.git/objects/b3
+./.git/objects/b3/49a6a10ff83576de49fd492f0ae811a38e07e2
+./.git/objects/b3/a7e62cd988bc2e638ca8a71ad377875e333c18
+./.git/objects/b4
+./.git/objects/b4/5f00c966ca020e9aecbe807156c9b0774738ec
+./.git/objects/b5
+./.git/objects/b5/53365103e502186f48f72dcdc1bcc0e67e14ce
+./.git/objects/b6
+./.git/objects/b6/b6129732e7048535855ee4876e206bfecff2aa
+./.git/objects/b8
+./.git/objects/b8/43dcbf5bd071136b831e513e0245710f7c6f10
+./.git/objects/bd
+./.git/objects/bd/185742ea65c86683905e4e3d9f4cf9f48e6dcf
+./.git/objects/be
+./.git/objects/be/cedd71ea9d3e49b0e048b43eb45ee0af70bdf9
+./.git/objects/c0
+./.git/objects/c0/380b6988b330d1d6ea9e756ac5a09838162445
+./.git/objects/c1
+./.git/objects/c1/4c2c69d138c57f15f81716f94e87aea91ec7e4
+./.git/objects/c1/a875fd36c7e530d91b9f3b51789f385dd8f94e
+./.git/objects/c2
+./.git/objects/c2/40b5470b08a911e0c6a8b4fa0d89fe869a3edc
+./.git/objects/c2/d3f0d4b3652abdd6c05c95c74814f9588aa137
+./.git/objects/c2/f4e4a6c9620a9a3f527b27ee548a1f6ed601b2
+./.git/objects/c7
+./.git/objects/c7/0a2ada7dcadd9ce229e34e074f46d90ae5984f
+./.git/objects/c9
+./.git/objects/c9/0f5474de3139aa7d812de6143c5dec5154b258
+./.git/objects/c9/658a85ea94e6437c6d0dedd95fd59bbdb7528a
+./.git/objects/cc
+./.git/objects/cc/49f85cb035799c5cbd5b2337b22cd78937d63b
+./.git/objects/cd
+./.git/objects/cd/264690fe145669bc8fffaf9273987324b576c4
+./.git/objects/cd/69d223b0d4165670be6e24076c3ecd0ca14e70
+./.git/objects/ce
+./.git/objects/ce/e3be0ce6ca08116dff37aa158e4b68d0a92c0f
+./.git/objects/d0
+./.git/objects/d0/e03ab4cf77b2bfc914accf2d3561a53ebf1472
+./.git/objects/d1
+./.git/objects/d1/4e4d01a54b14b004c1a998c50e326ec8c8ef18
+./.git/objects/d3
+./.git/objects/d3/9c1d55ee1c99728dbdf8dce60f45e70e685ed6
+./.git/objects/d4
+./.git/objects/d4/cda8ade1d91f35741690730aa64fd9fe5b07dc
+./.git/objects/d6
+./.git/objects/d6/12aad8ae9b848645237804fe0f08b485648b09
+./.git/objects/dc
+./.git/objects/dc/35d1cf1a94b58e5a3b2633267dca1f398c2f49
+./.git/objects/dc/b46f9d795561d51f7fd96a15a4431af4b20760
+./.git/objects/dd
+./.git/objects/dd/09ff3d298d132fbd302766716028f2a201aadd
+./.git/objects/de
+./.git/objects/de/94d9a5110651c8ab4856703247fd18ea162afd
+./.git/objects/e2
+./.git/objects/e2/dcc5cde7905dccd668e06b590d3b5deacc3d6d
+./.git/objects/e3
+./.git/objects/e3/8965112d5d18a73a603e22bc2cfd343d95ff9a
+./.git/objects/e4
+./.git/objects/e4/6b06e826a1da59e6a3f0acdbd79432b38a5a4d
+./.git/objects/e4/d5ef3120ed1faf9a7d09210d6bbd208ef44784
+./.git/objects/e6
+./.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+./.git/objects/e7
+./.git/objects/e7/db95e1e387ffcda6dd1956688b84a423af3c6e
+./.git/objects/e8
+./.git/objects/e8/9b5b61bbf41dbd4f721de82849a57c7ec8bbc1
+./.git/objects/e9
+./.git/objects/e9/1a32e7e84ddb8b7a077a67c6d4548dcd573501
+./.git/objects/eb
+./.git/objects/eb/3eeab9f6dfd3428f9d461d0bf5fdc9aa486dca
+./.git/objects/eb/794e9eb0da7efac0faf1a14b6a837193b66b55
+./.git/objects/ee
+./.git/objects/ee/3821bec4cdb50791de5cbcccc9e044dde654a1
+./.git/objects/ee/cbf5d5fd8417694d8e5cb762dc4b4d3c369ec6
+./.git/objects/ef
+./.git/objects/ef/d4c0255b7cbfaec102ae5be663d62b7244c07f
+./.git/objects/f0
+./.git/objects/f0/56bd19929a81039003332896e01ec31e68c0c9
+./.git/objects/f0/8daa8c97d3eef00d0404ff6f1b76f656b8ff3b
+./.git/objects/f1
+./.git/objects/f1/c67dfa2c86c2443504668370a9d70892a4671a
+./.git/objects/f5
+./.git/objects/f5/2bc5059299bb1ab9a9f05a0522b3c9bb585ee4
+./.git/objects/f6
+./.git/objects/f6/9348bd12217df28488785b2eb004e769f51428
+./.git/objects/f6/c9bac18aba06a0da6a8776eea2148868fbc51a
+./.git/objects/f7
+./.git/objects/f7/52655f7dbdad702f99e574a20b0f4be2918d85
+./.git/objects/f8
+./.git/objects/f8/41f8b7cf7a0591213652ba05ebf02315283840
+./.git/objects/f8/7347565a0628fc703ba7de48803efeb5d0557c
+./.git/objects/f8/d40b581ebf1739ef861e18374f1f50e08c08f6
+./.git/objects/fa
+./.git/objects/fa/1d460a387a64abac9417d8c8ba90626479ef91
+./.git/objects/fb
+./.git/objects/fb/5178a153353beb8dff440b47d0927920de6fe0
+./.git/objects/fc
+./.git/objects/fc/f1ffbf627f31810e5c50ccec4f72ff2faa2665
+./.git/objects/fe
+./.git/objects/fe/70858746612f1ac9acf11ee6ea07c32b30f0f0
+./.git/objects/ff
+./.git/objects/ff/3ba3f2635e37db6b94cae4169217c548675177
+./.git/objects/ff/7f6faf4323eccc9f8187116ddfeb7090e1a89e
+./.git/objects/ff/d1bcc00b26be3df76aff699716daa71e6e3786
+./.git/objects/info
+./.git/objects/pack
+./.git/packed-refs
+./.git/refs
+./.git/refs/heads
+./.git/refs/heads/m5-n-level-paging
+./.git/refs/heads/m6-inverted-page-table
+./.git/refs/heads/m7-tlb-simulation
+./.git/refs/heads/main
+./.git/refs/heads/refactor-structure
+./.git/refs/remotes
+./.git/refs/remotes/origin
+./.git/refs/remotes/origin/m2-big-page-table
+./.git/refs/remotes/origin/m3-physical-memory
+./.git/refs/remotes/origin/m4-multilevel-paging
+./.git/refs/remotes/origin/m5-n-level-paging
+./.git/refs/remotes/origin/m6-inverted-page-table
+./.git/refs/remotes/origin/m7-tlb-simulation
+./.git/refs/remotes/origin/main
+./.git/refs/remotes/origin/page-fault-handler
+./.git/refs/tags
+./.gitignore
+./.idea
+./.idea/.gitignore
+./.idea/misc.xml
+./.idea/modules.xml
+./.idea/paging.iml
+./.idea/vcs.xml
+./.idea/workspace.xml
+./CMakeLists.txt
+./README.md
+./analyze_repo.sh
+./cmake-build-debug
+./cmake-build-debug/.cmake
+./cmake-build-debug/.cmake/api
+./cmake-build-debug/.cmake/api/v1
+./cmake-build-debug/.cmake/api/v1/query
+./cmake-build-debug/.cmake/api/v1/query/cache-v2
+./cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1
+./cmake-build-debug/.cmake/api/v1/query/codemodel-v2
+./cmake-build-debug/.cmake/api/v1/query/toolchains-v1
+./cmake-build-debug/.cmake/api/v1/reply
+./cmake-build-debug/.cmake/api/v1/reply/cache-v2-30c651af366ef96872d4.json
+./cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-011bcce1477a36a92a0f.json
+./cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-d511156fe40d7bdc03fb.json
+./cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json
+./cmake-build-debug/.cmake/api/v1/reply/index-2025-12-04T06-25-04-0853.json
+./cmake-build-debug/.cmake/api/v1/reply/target-paging-Debug-c2e3e86ed7b161127d60.json
+./cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-392245e161730afd725b.json
+./cmake-build-debug/CMakeCache.txt
+./cmake-build-debug/CMakeFiles
+./cmake-build-debug/CMakeFiles/3.27.8
+./cmake-build-debug/CMakeFiles/3.27.8/CMakeCCompiler.cmake
+./cmake-build-debug/CMakeFiles/3.27.8/CMakeCXXCompiler.cmake
+./cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin
+./cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin
+./cmake-build-debug/CMakeFiles/3.27.8/CMakeRCCompiler.cmake
+./cmake-build-debug/CMakeFiles/3.27.8/CMakeSystem.cmake
+./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC
+./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c
+./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/a.exe
+./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/tmp
+./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX
+./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/CMakeCXXCompilerId.cpp
+./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/a.exe
+./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/tmp
+./cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml
+./cmake-build-debug/CMakeFiles/TargetDirectories.txt
+./cmake-build-debug/CMakeFiles/clion-Debug-log.txt
+./cmake-build-debug/CMakeFiles/clion-environment.txt
+./cmake-build-debug/CMakeFiles/cmake.check_cache
+./cmake-build-debug/CMakeFiles/paging.dir
+./cmake-build-debug/CMakeFiles/pkgRedirects
+./cmake-build-debug/CMakeFiles/rules.ninja
+./cmake-build-debug/Testing
+./cmake-build-debug/Testing/Temporary
+./cmake-build-debug/Testing/Temporary/LastTest.log
+./cmake-build-debug/build.ninja
+./cmake-build-debug/cmake_install.cmake
+./docs
+./docs/M1.md
+./docs/M2.md
+./docs/architecture.md
+./docs/memory_concepts.md
+./docs/milestones.md
+./inputs
+./inputs/input.txt
+./main
+./milestones
+./milestones/M3_Linear_Demand_Paging
+./milestones/M3_Linear_Demand_Paging/Linear_Demand_Paging_RAM.cpp
+./milestones/M3_Linear_Demand_Paging/README.md
+./milestones/M3_Linear_Demand_Paging/input.txt
+./milestones/M4_MultiLevel_Paging
+./milestones/M4_MultiLevel_Paging/MultiLevel_Paging.cpp
+./milestones/M4_MultiLevel_Paging/README.md
+./milestones/M4_MultiLevel_Paging/input.txt
+./milestones/M5_Generic_N_Level_Paging
+./milestones/M5_Generic_N_Level_Paging/Generic_Paging_64bit.cpp
+./milestones/M5_Generic_N_Level_Paging/README.md
+./milestones/M5_Generic_N_Level_Paging/input.txt
+./milestones/M6_Inverted_Page_Table
+./milestones/M6_Inverted_Page_Table/Inverted_Page_Table.cpp
+./milestones/M6_Inverted_Page_Table/README.md
+./milestones/M6_Inverted_Page_Table/input.txt
+./repo_analysis.txt
+./src
+./src/main.cpp
+./think.txt
+
+📄 ALL FILES (with sizes):
+-----------------------------------
+.:
+total 124K
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:24 .git
+-rwxrwxrwx 1 midoxmax midoxmax   63 Dec 13 23:19 .gitignore
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:24 .idea
+-rwxrwxrwx 1 midoxmax midoxmax  114 Dec  3 16:13 CMakeLists.txt
+-rwxrwxrwx 1 midoxmax midoxmax 2.0K Dec 13 23:18 README.md
+-rwxrwxrwx 1 midoxmax midoxmax 4.2K Dec 13 23:24 analyze_repo.sh
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  4 08:25 cmake-build-debug
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:18 docs
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:18 inputs
+-rwxrwxrwx 1 midoxmax midoxmax  40K Dec 11 09:32 main
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:18 milestones
+-rwxrwxrwx 1 midoxmax midoxmax  19K Dec 13 23:25 repo_analysis.txt
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:18 src
+-rwxrwxrwx 1 midoxmax midoxmax  184 Dec  8 14:14 think.txt
+
+./.git:
+total 4.0K
+-rwxrwxrwx 1 midoxmax midoxmax   71 Dec 13 23:19 COMMIT_EDITMSG
+-rwxrwxrwx 1 midoxmax midoxmax   98 Dec 13 12:58 FETCH_HEAD
+-rwxrwxrwx 1 midoxmax midoxmax   35 Dec 13 23:16 HEAD
+-rwxrwxrwx 1 midoxmax midoxmax   41 Dec 13 12:58 ORIG_HEAD
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 branches
+-rwxrwxrwx 1 midoxmax midoxmax  371 Dec 13 13:04 config
+-rwxrwxrwx 1 midoxmax midoxmax   73 Dec  6 17:55 description
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 hooks
+-rwxrwxrwx 1 midoxmax midoxmax 3.1K Dec 13 23:19 index
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 info
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 logs
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:19 objects
+-rwxrwxrwx 1 midoxmax midoxmax   46 Dec 10 11:44 packed-refs
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 18:03 refs
+
+./.git/branches:
+total 0
+
+./.git/hooks:
+total 40K
+-rwxrwxrwx 1 midoxmax midoxmax  478 Dec  6 17:55 applypatch-msg.sample
+-rwxrwxrwx 1 midoxmax midoxmax  896 Dec  6 17:55 commit-msg.sample
+-rwxrwxrwx 1 midoxmax midoxmax 4.6K Dec  6 17:55 fsmonitor-watchman.sample
+-rwxrwxrwx 1 midoxmax midoxmax  189 Dec  6 17:55 post-update.sample
+-rwxrwxrwx 1 midoxmax midoxmax  424 Dec  6 17:55 pre-applypatch.sample
+-rwxrwxrwx 1 midoxmax midoxmax 1.7K Dec  6 17:55 pre-commit.sample
+-rwxrwxrwx 1 midoxmax midoxmax  416 Dec  6 17:55 pre-merge-commit.sample
+-rwxrwxrwx 1 midoxmax midoxmax 1.4K Dec  6 17:55 pre-push.sample
+-rwxrwxrwx 1 midoxmax midoxmax 4.8K Dec  6 17:55 pre-rebase.sample
+-rwxrwxrwx 1 midoxmax midoxmax  544 Dec  6 17:55 pre-receive.sample
+-rwxrwxrwx 1 midoxmax midoxmax 1.5K Dec  6 17:55 prepare-commit-msg.sample
+-rwxrwxrwx 1 midoxmax midoxmax 2.8K Dec  6 17:55 push-to-checkout.sample
+-rwxrwxrwx 1 midoxmax midoxmax 3.6K Dec  6 17:55 update.sample
+
+./.git/info:
+total 0
+-rwxrwxrwx 1 midoxmax midoxmax 240 Dec  6 17:55 exclude
+
+./.git/logs:
+total 12K
+-rwxrwxrwx 1 midoxmax midoxmax 8.8K Dec 13 23:19 HEAD
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 18:03 refs
+
+./.git/logs/refs:
+total 0
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:16 heads
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 18:03 remotes
+
+./.git/logs/refs/heads:
+total 4.0K
+-rwxrwxrwx 1 midoxmax midoxmax  531 Dec 11 09:30 m5-n-level-paging
+-rwxrwxrwx 1 midoxmax midoxmax  357 Dec 12 14:30 m6-inverted-page-table
+-rwxrwxrwx 1 midoxmax midoxmax  523 Dec 13 23:03 m7-tlb-simulation
+-rwxrwxrwx 1 midoxmax midoxmax 2.1K Dec 13 12:58 main
+-rwxrwxrwx 1 midoxmax midoxmax  585 Dec 13 23:19 refactor-structure
+
+./.git/logs/refs/remotes:
+total 0
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 13:04 origin
+
+./.git/logs/refs/remotes/origin:
+total 4.0K
+-rwxrwxrwx 1 midoxmax midoxmax  438 Dec  8 12:02 m2-big-page-table
+-rwxrwxrwx 1 midoxmax midoxmax  292 Dec  9 10:27 m3-physical-memory
+-rwxrwxrwx 1 midoxmax midoxmax  438 Dec 10 11:43 m4-multilevel-paging
+-rwxrwxrwx 1 midoxmax midoxmax  146 Dec 10 19:06 m5-n-level-paging
+-rwxrwxrwx 1 midoxmax midoxmax  146 Dec 12 14:30 m6-inverted-page-table
+-rwxrwxrwx 1 midoxmax midoxmax  292 Dec 13 23:03 m7-tlb-simulation
+-rwxrwxrwx 1 midoxmax midoxmax 1.7K Dec 13 12:58 main
+-rwxrwxrwx 1 midoxmax midoxmax  146 Dec  8 15:13 page-fault-handler
+
+./.git/objects:
+total 0
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:18 00
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:44 03
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  8 15:19 06
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 12 14:34 07
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 12 14:30 08
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 12 14:30 09
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  9 17:15 0e
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:03 10
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 12
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:44 15
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 13:03 17
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:44 1b
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 1c
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  8 21:07 1e
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:44 22
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 12 14:34 26
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  9 10:52 27
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  8 15:13 28
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:18 2a
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 2b
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:19 2c
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 13:03 2f
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 12:58 30
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  8 12:07 32
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 19:06 34
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:44 36
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 38
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 11 09:30 3e
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 3f
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 40
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:44 42
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:19 43
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 11 09:30 45
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 11 09:30 47
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  8 15:18 49
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:18 4a
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 13:04 4f
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:18 50
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 52
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:44 53
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 12 14:30 55
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 56
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:44 59
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:43 5b
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 13:04 5d
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:19 5e
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 5f
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 60
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 61
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 13:03 66
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 68
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 19:06 6d
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  8 15:13 6f
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:18 71
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 72
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  8 14:03 73
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:43 74
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  8 14:03 75
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 19:06 77
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 7a
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  8 14:03 7b
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:44 7c
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  8 15:19 7e
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  8 12:02 7f
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 80
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:44 81
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  8 14:03 82
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 12:58 86
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:44 88
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:03 8c
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  9 17:15 8d
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 19:06 8e
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:18 91
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  8 12:02 94
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  8 14:03 96
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 13:04 97
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 11 09:30 98
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 99
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 12 14:30 9c
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 9f
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 a4
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 a5
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  9 10:52 a6
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 13:04 a8
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 aa
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  9 17:15 ac
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:44 ad
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 19:06 ae
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 13:04 b3
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 b4
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 b5
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 b6
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 12:58 b8
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  8 21:07 bd
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 be
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  9 17:31 c0
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  9 10:52 c1
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 c2
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 c7
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  9 17:31 c9
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  8 21:07 cc
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 11 09:30 cd
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 12 14:34 ce
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:03 d0
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  9 10:52 d1
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 18:15 d3
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  9 17:15 d4
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 d6
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 13:04 dc
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:44 dd
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  8 21:07 de
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  9 10:52 e2
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:44 e3
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:44 e4
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 e6
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  9 10:26 e7
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 e8
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 e9
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  9 10:27 eb
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:18 ee
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  8 21:07 ef
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  9 10:27 f0
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 f1
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 f5
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 f6
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 f7
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 11 09:30 f8
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 fa
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:44 fb
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:44 fc
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:18 fe
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:43 ff
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 info
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 pack
+
+./.git/objects/00:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 301 Dec 13 23:18 5cfe5277f7c480881bd3528b0e82d63a781637
+
+./.git/objects/03:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 398 Dec 10 11:44 43c52b8614de780c939b163de2dda12414b195
+
+./.git/objects/06:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 283 Dec  8 15:22 0ff08fdc24a2a4e277b5867be54cd878354245
+-r-xr-xr-x 1 midoxmax midoxmax 295 Dec  6 17:55 f6363ffd5e8095ee8cc41b45966ce0c817d370
+
+./.git/objects/07:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 480 Dec 12 14:34 d50fc74218037b6cba68f9eb315e5f16a987c7
+
+./.git/objects/08:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 198 Dec 12 14:30 1bad6fa92fb82bffbef17b0a2b80f06a8a2ef2
+
+./.git/objects/09:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 54 Dec 12 14:30 2439ad6ad9df9b52dc9c1d70c6954fb6c069d3
+
+./.git/objects/0e:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 61 Dec 10 19:06 924cb1cfe3f1709b19b2b98d282d27d255b01e
+
+./.git/objects/10:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 431 Dec 13 23:03 146e9298119c1bd114e232616295b1540737fe
+
+./.git/objects/12:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 187 Dec  6 17:55 cba1778df2e65d9a6ee4c32700acbaf3314229
+
+./.git/objects/15:
+total 8.0K
+-r-xr-xr-x 1 midoxmax midoxmax  882 Dec 10 11:44 4a7795593b0f85503f300b046cb008f7cc47b2
+-r-xr-xr-x 1 midoxmax midoxmax 2.7K Dec  9 17:15 fa57e7f6d3cd5713978f1354c794fc200c86d1
+
+./.git/objects/17:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 75 Dec 13 13:03 67ac7bbc592423429ca822dc66a814c1fb2776
+
+./.git/objects/1b:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 398 Dec 10 11:44 310608e565268fdde4c9b78473f109a509c88d
+-r-xr-xr-x 1 midoxmax midoxmax 543 Dec  9 17:15 a63554772db6ce5d840bb82b032e09a72f7ed7
+
+./.git/objects/1c:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 146 Dec  6 17:55 2fda565b94d0f2b94cb65ba7cca866e7a25478
+
+./.git/objects/1e:
+total 8.0K
+-r-xr-xr-x 1 midoxmax midoxmax  456 Dec  8 21:07 15c8c8ee2d9026a381856a8a00aed3acf9be35
+-r-xr-xr-x 1 midoxmax midoxmax 6.1K Dec  6 17:55 417c76fa2057092c8f1b75135123543badc21c
+
+./.git/objects/22:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 833 Dec 10 11:44 6f570be86409a335859d3c5ced451b14461194
+
+./.git/objects/26:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 189 Dec 12 14:34 74a8bf4803be3af1005c5049ac09c454a522d7
+-r-xr-xr-x 1 midoxmax midoxmax 940 Dec  9 10:52 ecb5f267b6475fd9b66ad922ceb5de0b033673
+
+./.git/objects/27:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax  90 Dec  6 17:55 09c67935902686b9be6ac088258eaf2e9bc2f8
+-r-xr-xr-x 1 midoxmax midoxmax 363 Dec  9 10:52 e7496bf7261c022c55a618d64d24e6e9bc4264
+-r-xr-xr-x 1 midoxmax midoxmax 343 Dec  6 17:55 f7b3079b19b58f6fdbb108251c125f78b7d707
+
+./.git/objects/28:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 280 Dec  8 15:13 84fe292ceb5b240661204de3dc8b62ab037cd3
+
+./.git/objects/2a:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 54 Dec 13 23:18 2580d95acb0a8641739cb891b4b4b06b3952b9
+
+./.git/objects/2b:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 91 Dec  6 17:55 0f6ad7f55797693f873b9a92cf6baf4a42639e
+
+./.git/objects/2c:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 61 Dec 13 23:19 07da44810f54d2f51cc9ea23d2b2b5e4167139
+
+./.git/objects/2f:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 1.6K Dec 13 13:03 62d82cdfa7fe0978d628978dbfc77094994530
+
+./.git/objects/30:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 548 Dec 13 13:03 3f84790250cf89a0b9f26270a72e4e42063da2
+-r-xr-xr-x 1 midoxmax midoxmax 436 Dec 11 09:30 9ceced17acd1b123bfaf018544d6c9de7377f2
+
+./.git/objects/32:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 943 Dec  8 12:07 68ad35522db44f322a0f89defd060b0a67ed1d
+
+./.git/objects/34:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 136 Dec 10 19:06 fc5a21e53bb5d673999088bc0eeff0b975204c
+
+./.git/objects/36:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 565 Dec 10 19:06 486ae85a245a4a67dd7bd80bb6ab955c544586
+
+./.git/objects/38:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 280 Dec  6 17:55 7cfbf7fe42a8193745e80dc8a73ced1f6dc570
+
+./.git/objects/3e:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 136 Dec 11 09:30 f82c8ffdb4a0e210ed6a26c432be02512d5c1f
+
+./.git/objects/3f:
+total 16K
+-r-xr-xr-x 1 midoxmax midoxmax 14K Dec  6 17:55 00abe79066ba0e755c073b8b7663dba7cb1a29
+-r-xr-xr-x 1 midoxmax midoxmax 235 Dec  6 17:55 0c3c1c9e90a1bcc6fc2380aa174029c6987e3e
+
+./.git/objects/40:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 50 Dec  6 17:55 898ac903f44b46d3910d1eae95058d85764b7a
+
+./.git/objects/42:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax  172 Dec  8 15:19 40e003cee205e25a8d9b04ef7ac60ef859a0b3
+-r-xr-xr-x 1 midoxmax midoxmax 2.3K Dec 10 11:44 a87ba8c533d153af027cd10d924a3c29d154c5
+
+./.git/objects/43:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 398 Dec  9 17:31 b4a4f7f96224dfa14881d622a33b997352e86d
+-r-xr-xr-x 1 midoxmax midoxmax 307 Dec 13 23:19 d035a55a92771797ce1fc9bcf47a69c5f8822c
+
+./.git/objects/45:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax  51 Dec  6 17:55 5b61cc7e0e520b572b5888bb0b8e833595dfd8
+-r-xr-xr-x 1 midoxmax midoxmax 922 Dec 11 09:30 8a85b354bbfda0aefa3942dba7c2be64e2fb79
+
+./.git/objects/47:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 2.0K Dec 11 09:30 724e04879373df1b10249ff17057ea13df201d
+
+./.git/objects/49:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 925 Dec  8 15:18 7d07df886b1def6c257aabd56bf2b7e7dafa4e
+
+./.git/objects/4a:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 382 Dec 13 23:18 647a85f5351c10498b65334947f9d1179565a5
+-r-xr-xr-x 1 midoxmax midoxmax 582 Dec 10 19:06 85d7ec4580bac695d893b2152c901d4672e710
+-r-xr-xr-x 1 midoxmax midoxmax 133 Dec 13 23:18 f4a5116309a8c5b749d237669cd0f06c1619e1
+
+./.git/objects/4f:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 399 Dec 10 11:44 2a1782bd27f0b6035d5d8182eb279d8a928e7f
+-r-xr-xr-x 1 midoxmax midoxmax 224 Dec 13 13:04 62bf952d1d343416c83f7567eb2fd9ff3ea8ff
+-r-xr-xr-x 1 midoxmax midoxmax 843 Dec  6 17:55 72876e9cd251a73f93bc0f94df203658113cb4
+
+./.git/objects/50:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax  197 Dec 13 23:18 0580747aaead730a55d1dbccdb6b2c9863c0ca
+-r-xr-xr-x 1 midoxmax midoxmax 1.1K Dec 13 23:18 c8ea6dd07eb841a1ac7f2660c99902840a771a
+
+./.git/objects/52:
+total 8.0K
+-r-xr-xr-x 1 midoxmax midoxmax 5.0K Dec  6 17:55 40ed7143f345c392b51ecb60baaefe8d40ea9a
+
+./.git/objects/53:
+total 8.0K
+-r-xr-xr-x 1 midoxmax midoxmax 832 Dec  9 10:52 6a9e63f19a5e05c2b2d179ba1f8868c10de170
+-r-xr-xr-x 1 midoxmax midoxmax 911 Dec 10 11:44 8bd020eb01b673c2d540d1bb7c9abfd8add438
+
+./.git/objects/55:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 948 Dec 11 09:30 565a7be08e0c92559c10bb125aa883adcf5f85
+-r-xr-xr-x 1 midoxmax midoxmax 479 Dec 12 14:30 abf0cda410aac334bba8c75fd2bc463d2dc126
+
+./.git/objects/56:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 92 Dec  6 17:55 c437b9b7acb76284e54ca56e02374aac6338f5
+-r-xr-xr-x 1 midoxmax midoxmax 44 Dec  6 17:55 febea80a6b6e8f4b7fa73e4b071f94c59afaa0
+
+./.git/objects/59:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 2.5K Dec 10 19:06 447606da8fccf1310329bc7856e4bde071b5e8
+
+./.git/objects/5b:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 398 Dec 10 11:43 6a36bc73785d2d5454dde838f6bcc8dad52230
+-r-xr-xr-x 1 midoxmax midoxmax 181 Dec  8 15:22 9d26a74fcc54144c3c607e4180e79d69fffbbe
+
+./.git/objects/5d:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 57 Dec 13 13:04 cd1cdfd2914f838a5b3c2f44f950634dc38d39
+
+./.git/objects/5e:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 436 Dec 11 09:30 2e645c1ae124da3b5a8115646bb359d3403449
+-r-xr-xr-x 1 midoxmax midoxmax 203 Dec 13 23:19 fff8a0e693f1a49c8e332598a49a49d570e9d8
+
+./.git/objects/5f:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 152 Dec  6 17:55 c7c39b150cd1fae977796116a3573dbbddbb46
+
+./.git/objects/60:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 496 Dec  6 17:55 aa4ecc1307039429f23e977fbd3c3381a4f8e6
+
+./.git/objects/61:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 187 Dec  6 17:55 06b75e2be2e5e263a863ff14cb1c08fe647d28
+-r-xr-xr-x 1 midoxmax midoxmax  57 Dec  6 17:55 5557617651dc6ad45071a4f493f78092a0959d
+
+./.git/objects/66:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 3.2K Dec 13 13:03 5bcc1a9796ee7288cd49b348288c4bee469e3e
+
+./.git/objects/68:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 45 Dec  6 17:55 47706638a473dc25d7cee1753ba609bedb7f51
+
+./.git/objects/6d:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 105 Dec  6 17:55 70257c7f56df99c8ffcc63227f40c72739b064
+-r-xr-xr-x 1 midoxmax midoxmax  51 Dec 13 23:18 fb9dbe375735b48a4708c981dc806c8680b5ea
+
+./.git/objects/6f:
+total 8.0K
+-r-xr-xr-x 1 midoxmax midoxmax 1.1K Dec  6 17:55 51ec2ca950c4c53b9251e6feb9ff3a0f67b8c9
+-r-xr-xr-x 1 midoxmax midoxmax 2.0K Dec  8 15:13 57b2bcdd1885a3f84167192c2874ef7d43fe61
+
+./.git/objects/71:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax   53 Dec 13 23:18 43e87fd2f1344ad8a1bc89e3b316e98de19643
+-r-xr-xr-x 1 midoxmax midoxmax  185 Dec 13 23:18 a0ae6359e8db3b3da87078f06c5ad2ee5e82e2
+-r-xr-xr-x 1 midoxmax midoxmax   76 Dec  6 17:55 e6d9e0a9657dc5b87411316e717253c3154539
+-r-xr-xr-x 1 midoxmax midoxmax 1.5K Dec 10 19:06 e9b79cdb4f1b252516fb87ee77c78a25181e23
+
+./.git/objects/72:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 223 Dec  6 17:55 c448e1d697cea2c9543cc662a9f8ad2c40583e
+
+./.git/objects/73:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 250 Dec  8 14:03 37a031376782021bb6970405d1ceeaeee28116
+
+./.git/objects/74:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 183 Dec 10 11:43 a31aa08adf5df3c338eb952c2254b8a39c9435
+-r-xr-xr-x 1 midoxmax midoxmax 207 Dec  6 18:15 f91847f27b95637990e37164eb57de6a22fe36
+
+./.git/objects/75:
+total 8.0K
+-r-xr-xr-x 1 midoxmax midoxmax 6.7K Dec  8 14:03 6477b4cf3def512e6d9db1a0c79c3eb5134632
+
+./.git/objects/77:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 436 Dec 10 19:06 55f004c381fa3185017854b066d76a67deb4e8
+
+./.git/objects/7a:
+total 16K
+-r-xr-xr-x 1 midoxmax midoxmax 13K Dec  6 17:55 62ff73b4c746eba0a4b800f407e9ef3970b9b7
+
+./.git/objects/7b:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 179 Dec  8 14:03 2024014ad08096b285a9353c7b535931ae9048
+
+./.git/objects/7c:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 932 Dec 10 11:44 d73e00e366f03cbf06bdcd90cf839834cc3ef9
+
+./.git/objects/7e:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 26 Dec  8 15:22 7cac4a95651c3d9092c0647764662f8e40ebf9
+
+./.git/objects/7f:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 250 Dec  8 12:02 1e898554aa4edc680f3b43bf47b2aa537186f3
+-r-xr-xr-x 1 midoxmax midoxmax 249 Dec  6 17:55 a382cc88d96d6772259942ba0f88dc0a6a6fba
+
+./.git/objects/80:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 75 Dec  8 14:03 b4f6609ee38bcdd0abcfc854c6b01ed9844854
+
+./.git/objects/81:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 54 Dec 10 11:44 a6fd3a765ffbb1b2633c6bce4f238d044d72bf
+
+./.git/objects/82:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 179 Dec  8 14:03 37a892d1ca534f9fca3063fb6ef1c70c9f71ef
+
+./.git/objects/86:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 398 Dec 10 11:44 16542084e70fc25ba47279814588e61b34f670
+-r-xr-xr-x 1 midoxmax midoxmax 479 Dec 13 12:58 3fc7fa32c8fc3d31c106f7f49109263c74d19b
+
+./.git/objects/88:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 907 Dec 10 11:44 3120b3d26790a6bc3906be2a29e38282c9971c
+
+./.git/objects/8c:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 133 Dec 10 11:43 69fb7fbbb212a33fb426ae7552a62f1b221f70
+-r-xr-xr-x 1 midoxmax midoxmax 300 Dec  9 10:27 9263729e73b0c26934e62e970506e125a0a08a
+-r-xr-xr-x 1 midoxmax midoxmax 191 Dec  9 17:31 b7a0b3bb67bff88d499423599d5d3666394b7c
+-r-xr-xr-x 1 midoxmax midoxmax 478 Dec 13 23:03 bbcf0d9d6566c118263c0e7455f996a2c8e641
+
+./.git/objects/8d:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 895 Dec  9 10:52 602e2aa54e636ebe3aec6646b63adad78e2787
+-r-xr-xr-x 1 midoxmax midoxmax 361 Dec  9 17:15 63d59e2a1235ef19be578ee74b0247cd6a87e1
+
+./.git/objects/8e:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 3.5K Dec 10 19:06 d58d9ad7dafac06a1d1fec199831b71c2a6065
+
+./.git/objects/91:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 347 Dec 13 23:18 6a4989a52007bac34a543e0c67ec5eb3010649
+-r-xr-xr-x 1 midoxmax midoxmax 183 Dec 13 23:18 976252c4db0ab77f18f5de927406cc1e90a92e
+
+./.git/objects/94:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 155 Dec  8 12:02 a25f7f4cb416c083d265558da75d457237d671
+
+./.git/objects/96:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 157 Dec  8 14:03 61ac713428efbad557d3ba3a62216b5bb7d226
+
+./.git/objects/97:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 135 Dec 13 23:18 ad7552222ecbbb191426a986c914e6bd5c1675
+-r-xr-xr-x 1 midoxmax midoxmax 677 Dec 12 14:34 f6fd69d48c8a97f293b6b55e67cd6eb6a3ec8b
+
+./.git/objects/98:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 136 Dec 13 23:18 144daeaf682e1dbd4af65eec1a0273bc9b313d
+
+./.git/objects/99:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 644 Dec  6 17:55 38610c103628489113d65515a4c26e391347b4
+
+./.git/objects/9c:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 1.2K Dec 12 14:30 dbc2812fe153bb52c332dd8b9f9a325208361c
+
+./.git/objects/9f:
+total 8.0K
+-r-xr-xr-x 1 midoxmax midoxmax 5.4K Dec  6 17:55 d60a4c5d9f104a59438c3ecb472af46d0d5c5e
+
+./.git/objects/a4:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 1.6K Dec  6 17:55 332b1e285a607b25145eea92a756af838ecc90
+
+./.git/objects/a5:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 95 Dec  6 17:55 6a32da86e82defbd5174c4a164725af01debfa
+
+./.git/objects/a6:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 363 Dec  9 10:52 9c54d03f5534be09d1f3fd7f9d868eda61294d
+
+./.git/objects/a8:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 175 Dec 13 13:04 9998da40fe431e32b8732b796b46854184d7b6
+
+./.git/objects/aa:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 3.3K Dec  6 17:55 1aa981aefb96ed252fb7dd746ec45c424e6e88
+-r-xr-xr-x 1 midoxmax midoxmax  163 Dec  6 17:55 daacd05902f597cb7a554119dfc9986a637752
+
+./.git/objects/ac:
+total 16K
+-r-xr-xr-x 1 midoxmax midoxmax 12K Dec  9 17:15 8e298adf180dc14e32702600c0737af7e4a92c
+-r-xr-xr-x 1 midoxmax midoxmax 977 Dec  8 12:07 a1009c704702086f16449920f817b74044a219
+
+./.git/objects/ad:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 54 Dec 10 11:44 17790f66f8fb6a193f9ef5160b38f33f393085
+
+./.git/objects/ae:
+total 12K
+-r-xr-xr-x 1 midoxmax midoxmax 12K Dec 10 19:06 cfc8da9cdd26544dfe9654b8dabe5926e72c62
+
+./.git/objects/b3:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 2.9K Dec 10 19:06 49a6a10ff83576de49fd492f0ae811a38e07e2
+-r-xr-xr-x 1 midoxmax midoxmax   51 Dec 13 13:04 a7e62cd988bc2e638ca8a71ad377875e333c18
+
+./.git/objects/b4:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 125 Dec  6 17:55 5f00c966ca020e9aecbe807156c9b0774738ec
+
+./.git/objects/b5:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 2.9K Dec  6 17:55 53365103e502186f48f72dcdc1bcc0e67e14ce
+
+./.git/objects/b6:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 864 Dec  6 17:55 b6129732e7048535855ee4876e206bfecff2aa
+
+./.git/objects/b8:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 926 Dec 13 12:58 43dcbf5bd071136b831e513e0245710f7c6f10
+
+./.git/objects/bd:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 314 Dec  8 21:07 185742ea65c86683905e4e3d9f4cf9f48e6dcf
+
+./.git/objects/be:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 610 Dec  6 17:55 cedd71ea9d3e49b0e048b43eb45ee0af70bdf9
+
+./.git/objects/c0:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 54 Dec  9 17:31 380b6988b330d1d6ea9e756ac5a09838162445
+
+./.git/objects/c1:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax  464 Dec  9 10:52 4c2c69d138c57f15f81716f94e87aea91ec7e4
+-r-xr-xr-x 1 midoxmax midoxmax 1.7K Dec  8 12:02 a875fd36c7e530d91b9f3b51789f385dd8f94e
+
+./.git/objects/c2:
+total 16K
+-r-xr-xr-x 1 midoxmax midoxmax 272 Dec  6 17:55 40b5470b08a911e0c6a8b4fa0d89fe869a3edc
+-r-xr-xr-x 1 midoxmax midoxmax 14K Dec  6 17:55 d3f0d4b3652abdd6c05c95c74814f9588aa137
+-r-xr-xr-x 1 midoxmax midoxmax 255 Dec  8 14:03 f4e4a6c9620a9a3f527b27ee548a1f6ed601b2
+
+./.git/objects/c7:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 134 Dec  6 17:55 0a2ada7dcadd9ce229e34e074f46d90ae5984f
+
+./.git/objects/c9:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax  500 Dec  6 17:55 0f5474de3139aa7d812de6143c5dec5154b258
+-r-xr-xr-x 1 midoxmax midoxmax 1.8K Dec  9 17:31 658a85ea94e6437c6d0dedd95fd59bbdb7528a
+
+./.git/objects/cc:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 37 Dec  9 17:15 49f85cb035799c5cbd5b2337b22cd78937d63b
+
+./.git/objects/cd:
+total 8.0K
+-r-xr-xr-x 1 midoxmax midoxmax  863 Dec 11 09:30 264690fe145669bc8fffaf9273987324b576c4
+-r-xr-xr-x 1 midoxmax midoxmax 1.7K Dec  6 17:55 69d223b0d4165670be6e24076c3ecd0ca14e70
+
+./.git/objects/ce:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 942 Dec 12 14:34 e3be0ce6ca08116dff37aa158e4b68d0a92c0f
+
+./.git/objects/d0:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 4.0K Dec 13 23:18 e03ab4cf77b2bfc914accf2d3561a53ebf1472
+
+./.git/objects/d1:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 363 Dec  9 10:52 4e4d01a54b14b004c1a998c50e326ec8c8ef18
+
+./.git/objects/d3:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 250 Dec  6 18:15 9c1d55ee1c99728dbdf8dce60f45e70e685ed6
+
+./.git/objects/d4:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 510 Dec  9 17:15 cda8ade1d91f35741690730aa64fd9fe5b07dc
+
+./.git/objects/d6:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 404 Dec  6 17:55 12aad8ae9b848645237804fe0f08b485648b09
+
+./.git/objects/dc:
+total 16K
+-r-xr-xr-x 1 midoxmax midoxmax 478 Dec 13 13:04 35d1cf1a94b58e5a3b2633267dca1f398c2f49
+-r-xr-xr-x 1 midoxmax midoxmax 13K Dec  6 17:55 b46f9d795561d51f7fd96a15a4431af4b20760
+
+./.git/objects/dd:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 933 Dec 10 11:44 09ff3d298d132fbd302766716028f2a201aadd
+
+./.git/objects/de:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 2.7K Dec  8 21:07 94d9a5110651c8ab4856703247fd18ea162afd
+
+./.git/objects/e2:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 888 Dec  9 10:52 dcc5cde7905dccd668e06b590d3b5deacc3d6d
+
+./.git/objects/e3:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 54 Dec 10 11:44 8965112d5d18a73a603e22bc2cfd343d95ff9a
+
+./.git/objects/e4:
+total 8.0K
+-r-xr-xr-x 1 midoxmax midoxmax  586 Dec  9 10:52 6b06e826a1da59e6a3f0acdbd79432b38a5a4d
+-r-xr-xr-x 1 midoxmax midoxmax 1.7K Dec 10 11:44 d5ef3120ed1faf9a7d09210d6bbd208ef44784
+
+./.git/objects/e6:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 15 Dec  8 14:09 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+
+./.git/objects/e7:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 1.1K Dec  9 17:15 db95e1e387ffcda6dd1956688b84a423af3c6e
+
+./.git/objects/e8:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 93 Dec  6 17:55 9b5b61bbf41dbd4f721de82849a57c7ec8bbc1
+
+./.git/objects/e9:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 75 Dec  6 17:55 1a32e7e84ddb8b7a077a67c6d4548dcd573501
+
+./.git/objects/eb:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax  363 Dec  9 10:27 3eeab9f6dfd3428f9d461d0bf5fdc9aa486dca
+-r-xr-xr-x 1 midoxmax midoxmax 1.2K Dec  6 18:15 794e9eb0da7efac0faf1a14b6a837193b66b55
+
+./.git/objects/ee:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 250 Dec  6 17:55 3821bec4cdb50791de5cbcccc9e044dde654a1
+-r-xr-xr-x 1 midoxmax midoxmax 297 Dec 13 23:18 cbf5d5fd8417694d8e5cb762dc4b4d3c369ec6
+
+./.git/objects/ef:
+total 12K
+-r-xr-xr-x 1 midoxmax midoxmax 9.8K Dec  8 21:07 d4c0255b7cbfaec102ae5be663d62b7244c07f
+
+./.git/objects/f0:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 125 Dec  6 17:55 56bd19929a81039003332896e01ec31e68c0c9
+-r-xr-xr-x 1 midoxmax midoxmax 140 Dec 13 23:18 8daa8c97d3eef00d0404ff6f1b76f656b8ff3b
+
+./.git/objects/f1:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 132 Dec  6 17:55 c67dfa2c86c2443504668370a9d70892a4671a
+
+./.git/objects/f5:
+total 8.0K
+-r-xr-xr-x 1 midoxmax midoxmax 6.1K Dec  6 17:55 2bc5059299bb1ab9a9f05a0522b3c9bb585ee4
+
+./.git/objects/f6:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 170 Dec  6 17:55 9348bd12217df28488785b2eb004e769f51428
+-r-xr-xr-x 1 midoxmax midoxmax 159 Dec  6 17:55 c9bac18aba06a0da6a8776eea2148868fbc51a
+
+./.git/objects/f7:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 546 Dec  6 17:55 52655f7dbdad702f99e574a20b0f4be2918d85
+
+./.git/objects/f8:
+total 8.0K
+-r-xr-xr-x 1 midoxmax midoxmax  415 Dec  8 12:02 41f8b7cf7a0591213652ba05ebf02315283840
+-r-xr-xr-x 1 midoxmax midoxmax 1.9K Dec 11 09:30 7347565a0628fc703ba7de48803efeb5d0557c
+-r-xr-xr-x 1 midoxmax midoxmax  935 Dec  9 10:52 d40b581ebf1739ef861e18374f1f50e08c08f6
+
+./.git/objects/fa:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 423 Dec  6 17:55 1d460a387a64abac9417d8c8ba90626479ef91
+
+./.git/objects/fb:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 398 Dec 10 11:44 5178a153353beb8dff440b47d0927920de6fe0
+
+./.git/objects/fc:
+total 4.0K
+-r-xr-xr-x 1 midoxmax midoxmax 956 Dec 10 11:44 f1ffbf627f31810e5c50ccec4f72ff2faa2665
+
+./.git/objects/fe:
+total 0
+-r-xr-xr-x 1 midoxmax midoxmax 60 Dec 13 23:18 70858746612f1ac9acf11ee6ea07c32b30f0f0
+
+./.git/objects/ff:
+total 8.0K
+-r-xr-xr-x 1 midoxmax midoxmax 2.9K Dec 10 11:43 3ba3f2635e37db6b94cae4169217c548675177
+-r-xr-xr-x 1 midoxmax midoxmax  356 Dec  8 15:13 7f6faf4323eccc9f8187116ddfeb7090e1a89e
+-r-xr-xr-x 1 midoxmax midoxmax 1.8K Dec  8 14:03 d1bcc00b26be3df76aff699716daa71e6e3786
+
+./.git/objects/info:
+total 0
+
+./.git/objects/pack:
+total 0
+
+./.git/refs:
+total 0
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:19 heads
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 18:03 remotes
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  6 17:55 tags
+
+./.git/refs/heads:
+total 0
+-rwxrwxrwx 1 midoxmax midoxmax 41 Dec 11 09:30 m5-n-level-paging
+-rwxrwxrwx 1 midoxmax midoxmax 41 Dec 12 14:30 m6-inverted-page-table
+-rwxrwxrwx 1 midoxmax midoxmax 41 Dec 13 23:03 m7-tlb-simulation
+-rwxrwxrwx 1 midoxmax midoxmax 41 Dec 13 12:58 main
+-rwxrwxrwx 1 midoxmax midoxmax 41 Dec 13 23:19 refactor-structure
+
+./.git/refs/remotes:
+total 0
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 23:20 origin
+
+./.git/refs/remotes/origin:
+total 0
+-rwxrwxrwx 1 midoxmax midoxmax 41 Dec  8 12:02 m2-big-page-table
+-rwxrwxrwx 1 midoxmax midoxmax 41 Dec  9 10:27 m3-physical-memory
+-rwxrwxrwx 1 midoxmax midoxmax 41 Dec 10 11:43 m4-multilevel-paging
+-rwxrwxrwx 1 midoxmax midoxmax 41 Dec 10 19:06 m5-n-level-paging
+-rwxrwxrwx 1 midoxmax midoxmax 41 Dec 12 14:30 m6-inverted-page-table
+-rwxrwxrwx 1 midoxmax midoxmax 41 Dec 13 23:03 m7-tlb-simulation
+-rwxrwxrwx 1 midoxmax midoxmax 41 Dec 13 12:58 main
+-rwxrwxrwx 1 midoxmax midoxmax 41 Dec  8 15:13 page-fault-handler
+
+./.git/refs/tags:
+total 0
+
+./.idea:
+total 8.0K
+-rwxrwxrwx 1 midoxmax midoxmax  184 Dec  3 16:13 .gitignore
+-rwxrwxrwx 1 midoxmax midoxmax  140 Dec  3 16:13 misc.xml
+-rwxrwxrwx 1 midoxmax midoxmax  271 Dec  4 08:25 modules.xml
+-rwxrwxrwx 1 midoxmax midoxmax   98 Dec  4 08:25 paging.iml
+-rwxrwxrwx 1 midoxmax midoxmax  185 Dec  8 14:04 vcs.xml
+-rwxrwxrwx 1 midoxmax midoxmax 4.8K Dec 13 23:24 workspace.xml
+
+./cmake-build-debug:
+total 36K
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  3 16:13 .cmake
+-rwxrwxrwx 1 midoxmax midoxmax  17K Dec  3 16:13 CMakeCache.txt
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  4 08:25 CMakeFiles
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  3 16:13 Testing
+-rwxrwxrwx 1 midoxmax midoxmax 9.2K Dec  4 08:25 build.ninja
+-rwxrwxrwx 1 midoxmax midoxmax 1.6K Dec  3 16:13 cmake_install.cmake
+
+./cmake-build-debug/.cmake:
+total 0
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  3 16:13 api
+
+./cmake-build-debug/.cmake/api:
+total 0
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  4 08:25 v1
+
+./cmake-build-debug/.cmake/api/v1:
+total 0
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  3 16:13 query
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  4 08:25 reply
+
+./cmake-build-debug/.cmake/api/v1/query:
+total 0
+-rwxrwxrwx 1 midoxmax midoxmax 0 Dec  3 16:13 cache-v2
+-rwxrwxrwx 1 midoxmax midoxmax 0 Dec  3 16:13 cmakeFiles-v1
+-rwxrwxrwx 1 midoxmax midoxmax 0 Dec  3 16:13 codemodel-v2
+-rwxrwxrwx 1 midoxmax midoxmax 0 Dec  3 16:13 toolchains-v1
+
+./cmake-build-debug/.cmake/api/v1/reply:
+total 52K
+-rwxrwxrwx 1 midoxmax midoxmax  27K Dec  3 16:13 cache-v2-30c651af366ef96872d4.json
+-rwxrwxrwx 1 midoxmax midoxmax 5.0K Dec  4 08:25 cmakeFiles-v1-011bcce1477a36a92a0f.json
+-rwxrwxrwx 1 midoxmax midoxmax  966 Dec  3 16:13 codemodel-v2-d511156fe40d7bdc03fb.json
+-rwxrwxrwx 1 midoxmax midoxmax  168 Dec  3 16:13 directory-.-Debug-d0094a50bb2071803777.json
+-rwxrwxrwx 1 midoxmax midoxmax 2.0K Dec  4 08:25 index-2025-12-04T06-25-04-0853.json
+-rwxrwxrwx 1 midoxmax midoxmax 1.5K Dec  3 16:13 target-paging-Debug-c2e3e86ed7b161127d60.json
+-rwxrwxrwx 1 midoxmax midoxmax 2.2K Dec  3 16:13 toolchains-v1-392245e161730afd725b.json
+
+./cmake-build-debug/CMakeFiles:
+total 60K
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  3 16:13 3.27.8
+-rwxrwxrwx 1 midoxmax midoxmax  50K Dec  3 16:13 CMakeConfigureLog.yaml
+-rwxrwxrwx 1 midoxmax midoxmax  182 Dec  4 08:25 TargetDirectories.txt
+-rwxrwxrwx 1 midoxmax midoxmax  347 Dec  4 08:25 clion-Debug-log.txt
+-rwxrwxrwx 1 midoxmax midoxmax  151 Dec  4 08:25 clion-environment.txt
+-rwxrwxrwx 1 midoxmax midoxmax   86 Dec  4 08:25 cmake.check_cache
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  3 16:13 paging.dir
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  4 08:25 pkgRedirects
+-rwxrwxrwx 1 midoxmax midoxmax 2.3K Dec  4 08:25 rules.ninja
+
+./cmake-build-debug/CMakeFiles/3.27.8:
+total 100K
+-rwxrwxrwx 1 midoxmax midoxmax 2.8K Dec  3 16:13 CMakeCCompiler.cmake
+-rwxrwxrwx 1 midoxmax midoxmax 5.9K Dec  3 16:13 CMakeCXXCompiler.cmake
+-rwxrwxrwx 1 midoxmax midoxmax  43K Dec  3 16:13 CMakeDetermineCompilerABI_C.bin
+-rwxrwxrwx 1 midoxmax midoxmax  43K Dec  3 16:13 CMakeDetermineCompilerABI_CXX.bin
+-rwxrwxrwx 1 midoxmax midoxmax  259 Dec  3 16:13 CMakeRCCompiler.cmake
+-rwxrwxrwx 1 midoxmax midoxmax  395 Dec  3 16:13 CMakeSystem.cmake
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  3 16:13 CompilerIdC
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  3 16:13 CompilerIdCXX
+
+./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC:
+total 72K
+-rwxrwxrwx 1 midoxmax midoxmax  27K Dec  3 16:13 CMakeCCompilerId.c
+-rwxrwxrwx 1 midoxmax midoxmax  43K Dec  3 16:13 a.exe
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  3 16:13 tmp
+
+./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/tmp:
+total 0
+
+./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX:
+total 72K
+-rwxrwxrwx 1 midoxmax midoxmax  27K Dec  3 16:13 CMakeCXXCompilerId.cpp
+-rwxrwxrwx 1 midoxmax midoxmax  43K Dec  3 16:13 a.exe
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  3 16:13 tmp
+
+./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/tmp:
+total 0
+
+./cmake-build-debug/CMakeFiles/paging.dir:
+total 0
+
+./cmake-build-debug/CMakeFiles/pkgRedirects:
+total 0
+
+./cmake-build-debug/Testing:
+total 0
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 13 12:27 Temporary
+
+./cmake-build-debug/Testing/Temporary:
+total 0
+-rwxrwxrwx 1 midoxmax midoxmax 156 Dec 13 12:27 LastTest.log
+
+./docs:
+total 0
+-rwxrwxrwx 1 midoxmax midoxmax 384 Dec  6 17:55 M1.md
+-rwxrwxrwx 1 midoxmax midoxmax 344 Dec  8 12:07 M2.md
+-rwxrwxrwx 1 midoxmax midoxmax 547 Dec 13 23:18 architecture.md
+-rwxrwxrwx 1 midoxmax midoxmax 423 Dec 13 23:18 memory_concepts.md
+-rwxrwxrwx 1 midoxmax midoxmax 429 Dec 13 23:18 milestones.md
+
+./inputs:
+total 0
+-rwxrwxrwx 1 midoxmax midoxmax 67 Dec 11 09:32 input.txt
+
+./milestones:
+total 0
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec  9 10:52 M3_Linear_Demand_Paging
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 10 11:44 M4_MultiLevel_Paging
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 11 09:32 M5_Generic_N_Level_Paging
+drwxrwxrwx 1 midoxmax midoxmax 4.0K Dec 12 14:34 M6_Inverted_Page_Table
+
+./milestones/M3_Linear_Demand_Paging:
+total 12K
+-rwxrwxrwx 1 midoxmax midoxmax 7.9K Dec  9 10:52 Linear_Demand_Paging_RAM.cpp
+-rwxrwxrwx 1 midoxmax midoxmax 2.1K Dec  9 10:52 README.md
+-rwxrwxrwx 1 midoxmax midoxmax   36 Dec  9 10:52 input.txt
+
+./milestones/M4_MultiLevel_Paging:
+total 20K
+-rwxrwxrwx 1 midoxmax midoxmax 9.2K Dec 10 11:44 MultiLevel_Paging.cpp
+-rwxrwxrwx 1 midoxmax midoxmax 5.5K Dec 10 11:44 README.md
+-rwxrwxrwx 1 midoxmax midoxmax   80 Dec 10 11:44 input.txt
+
+./milestones/M5_Generic_N_Level_Paging:
+total 16K
+-rwxrwxrwx 1 midoxmax midoxmax  11K Dec 11 09:32 Generic_Paging_64bit.cpp
+-rwxrwxrwx 1 midoxmax midoxmax 3.7K Dec 11 09:32 README.md
+-rwxrwxrwx 1 midoxmax midoxmax   67 Dec 11 09:32 input.txt
+
+./milestones/M6_Inverted_Page_Table:
+total 16K
+-rwxrwxrwx 1 midoxmax midoxmax 9.3K Dec 12 14:28 Inverted_Page_Table.cpp
+-rwxrwxrwx 1 midoxmax midoxmax 2.2K Dec 12 14:34 README.md
+-rwxrwxrwx 1 midoxmax midoxmax   67 Dec 12 14:28 input.txt
+
+./src:
+total 12K
+-rwxrwxrwx 1 midoxmax midoxmax 12K Dec 13 23:00 main.cpp
+
+📊 FILE TYPE SUMMARY:
+-----------------------------------
+     13 sample
+     12 txt
+     10 md
+      7 json
+      6 cpp
+      5 cmake
+      4 xml
+      2 ninja
+      2 gitignore
+      2 exe
+      2 bin
+      1 yaml
+      1 sh
+      1 log
+      1 iml
+      1 git/refs/remotes/origin/page-fault-handler
+      1 git/refs/remotes/origin/main
+      1 git/refs/remotes/origin/m7-tlb-simulation
+      1 git/refs/remotes/origin/m6-inverted-page-table
+      1 git/refs/remotes/origin/m5-n-level-paging
+      1 git/refs/remotes/origin/m4-multilevel-paging
+      1 git/refs/remotes/origin/m3-physical-memory
+      1 git/refs/remotes/origin/m2-big-page-table
+      1 git/refs/heads/refactor-structure
+      1 git/refs/heads/main
+      1 git/refs/heads/m7-tlb-simulation
+      1 git/refs/heads/m6-inverted-page-table
+      1 git/refs/heads/m5-n-level-paging
+      1 git/packed-refs
+      1 git/objects/ff/d1bcc00b26be3df76aff699716daa71e6e3786
+      1 git/objects/ff/7f6faf4323eccc9f8187116ddfeb7090e1a89e
+      1 git/objects/ff/3ba3f2635e37db6b94cae4169217c548675177
+      1 git/objects/fe/70858746612f1ac9acf11ee6ea07c32b30f0f0
+      1 git/objects/fc/f1ffbf627f31810e5c50ccec4f72ff2faa2665
+      1 git/objects/fb/5178a153353beb8dff440b47d0927920de6fe0
+      1 git/objects/fa/1d460a387a64abac9417d8c8ba90626479ef91
+      1 git/objects/f8/d40b581ebf1739ef861e18374f1f50e08c08f6
+      1 git/objects/f8/7347565a0628fc703ba7de48803efeb5d0557c
+      1 git/objects/f8/41f8b7cf7a0591213652ba05ebf02315283840
+      1 git/objects/f7/52655f7dbdad702f99e574a20b0f4be2918d85
+      1 git/objects/f6/c9bac18aba06a0da6a8776eea2148868fbc51a
+      1 git/objects/f6/9348bd12217df28488785b2eb004e769f51428
+      1 git/objects/f5/2bc5059299bb1ab9a9f05a0522b3c9bb585ee4
+      1 git/objects/f1/c67dfa2c86c2443504668370a9d70892a4671a
+      1 git/objects/f0/8daa8c97d3eef00d0404ff6f1b76f656b8ff3b
+      1 git/objects/f0/56bd19929a81039003332896e01ec31e68c0c9
+      1 git/objects/ef/d4c0255b7cbfaec102ae5be663d62b7244c07f
+      1 git/objects/ee/cbf5d5fd8417694d8e5cb762dc4b4d3c369ec6
+      1 git/objects/ee/3821bec4cdb50791de5cbcccc9e044dde654a1
+      1 git/objects/eb/794e9eb0da7efac0faf1a14b6a837193b66b55
+      1 git/objects/eb/3eeab9f6dfd3428f9d461d0bf5fdc9aa486dca
+      1 git/objects/e9/1a32e7e84ddb8b7a077a67c6d4548dcd573501
+      1 git/objects/e8/9b5b61bbf41dbd4f721de82849a57c7ec8bbc1
+      1 git/objects/e7/db95e1e387ffcda6dd1956688b84a423af3c6e
+      1 git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+      1 git/objects/e4/d5ef3120ed1faf9a7d09210d6bbd208ef44784
+      1 git/objects/e4/6b06e826a1da59e6a3f0acdbd79432b38a5a4d
+      1 git/objects/e3/8965112d5d18a73a603e22bc2cfd343d95ff9a
+      1 git/objects/e2/dcc5cde7905dccd668e06b590d3b5deacc3d6d
+      1 git/objects/de/94d9a5110651c8ab4856703247fd18ea162afd
+      1 git/objects/dd/09ff3d298d132fbd302766716028f2a201aadd
+      1 git/objects/dc/b46f9d795561d51f7fd96a15a4431af4b20760
+      1 git/objects/dc/35d1cf1a94b58e5a3b2633267dca1f398c2f49
+      1 git/objects/d6/12aad8ae9b848645237804fe0f08b485648b09
+      1 git/objects/d4/cda8ade1d91f35741690730aa64fd9fe5b07dc
+      1 git/objects/d3/9c1d55ee1c99728dbdf8dce60f45e70e685ed6
+      1 git/objects/d1/4e4d01a54b14b004c1a998c50e326ec8c8ef18
+      1 git/objects/d0/e03ab4cf77b2bfc914accf2d3561a53ebf1472
+      1 git/objects/ce/e3be0ce6ca08116dff37aa158e4b68d0a92c0f
+      1 git/objects/cd/69d223b0d4165670be6e24076c3ecd0ca14e70
+      1 git/objects/cd/264690fe145669bc8fffaf9273987324b576c4
+      1 git/objects/cc/49f85cb035799c5cbd5b2337b22cd78937d63b
+      1 git/objects/c9/658a85ea94e6437c6d0dedd95fd59bbdb7528a
+      1 git/objects/c9/0f5474de3139aa7d812de6143c5dec5154b258
+      1 git/objects/c7/0a2ada7dcadd9ce229e34e074f46d90ae5984f
+      1 git/objects/c2/f4e4a6c9620a9a3f527b27ee548a1f6ed601b2
+      1 git/objects/c2/d3f0d4b3652abdd6c05c95c74814f9588aa137
+      1 git/objects/c2/40b5470b08a911e0c6a8b4fa0d89fe869a3edc
+      1 git/objects/c1/a875fd36c7e530d91b9f3b51789f385dd8f94e
+      1 git/objects/c1/4c2c69d138c57f15f81716f94e87aea91ec7e4
+      1 git/objects/c0/380b6988b330d1d6ea9e756ac5a09838162445
+      1 git/objects/be/cedd71ea9d3e49b0e048b43eb45ee0af70bdf9
+      1 git/objects/bd/185742ea65c86683905e4e3d9f4cf9f48e6dcf
+      1 git/objects/b8/43dcbf5bd071136b831e513e0245710f7c6f10
+      1 git/objects/b6/b6129732e7048535855ee4876e206bfecff2aa
+      1 git/objects/b5/53365103e502186f48f72dcdc1bcc0e67e14ce
+      1 git/objects/b4/5f00c966ca020e9aecbe807156c9b0774738ec
+      1 git/objects/b3/a7e62cd988bc2e638ca8a71ad377875e333c18
+      1 git/objects/b3/49a6a10ff83576de49fd492f0ae811a38e07e2
+      1 git/objects/ae/cfc8da9cdd26544dfe9654b8dabe5926e72c62
+      1 git/objects/ad/17790f66f8fb6a193f9ef5160b38f33f393085
+      1 git/objects/ac/a1009c704702086f16449920f817b74044a219
+      1 git/objects/ac/8e298adf180dc14e32702600c0737af7e4a92c
+      1 git/objects/aa/daacd05902f597cb7a554119dfc9986a637752
+      1 git/objects/aa/1aa981aefb96ed252fb7dd746ec45c424e6e88
+      1 git/objects/a8/9998da40fe431e32b8732b796b46854184d7b6
+      1 git/objects/a6/9c54d03f5534be09d1f3fd7f9d868eda61294d
+      1 git/objects/a5/6a32da86e82defbd5174c4a164725af01debfa
+      1 git/objects/a4/332b1e285a607b25145eea92a756af838ecc90
+      1 git/objects/9f/d60a4c5d9f104a59438c3ecb472af46d0d5c5e
+      1 git/objects/9c/dbc2812fe153bb52c332dd8b9f9a325208361c
+      1 git/objects/99/38610c103628489113d65515a4c26e391347b4
+      1 git/objects/98/144daeaf682e1dbd4af65eec1a0273bc9b313d
+      1 git/objects/97/f6fd69d48c8a97f293b6b55e67cd6eb6a3ec8b
+      1 git/objects/97/ad7552222ecbbb191426a986c914e6bd5c1675
+      1 git/objects/96/61ac713428efbad557d3ba3a62216b5bb7d226
+      1 git/objects/94/a25f7f4cb416c083d265558da75d457237d671
+      1 git/objects/91/976252c4db0ab77f18f5de927406cc1e90a92e
+      1 git/objects/91/6a4989a52007bac34a543e0c67ec5eb3010649
+      1 git/objects/8e/d58d9ad7dafac06a1d1fec199831b71c2a6065
+      1 git/objects/8d/63d59e2a1235ef19be578ee74b0247cd6a87e1
+      1 git/objects/8d/602e2aa54e636ebe3aec6646b63adad78e2787
+      1 git/objects/8c/bbcf0d9d6566c118263c0e7455f996a2c8e641
+      1 git/objects/8c/b7a0b3bb67bff88d499423599d5d3666394b7c
+      1 git/objects/8c/9263729e73b0c26934e62e970506e125a0a08a
+      1 git/objects/8c/69fb7fbbb212a33fb426ae7552a62f1b221f70
+      1 git/objects/88/3120b3d26790a6bc3906be2a29e38282c9971c
+      1 git/objects/86/3fc7fa32c8fc3d31c106f7f49109263c74d19b
+      1 git/objects/86/16542084e70fc25ba47279814588e61b34f670
+      1 git/objects/82/37a892d1ca534f9fca3063fb6ef1c70c9f71ef
+      1 git/objects/81/a6fd3a765ffbb1b2633c6bce4f238d044d72bf
+      1 git/objects/80/b4f6609ee38bcdd0abcfc854c6b01ed9844854
+      1 git/objects/7f/a382cc88d96d6772259942ba0f88dc0a6a6fba
+      1 git/objects/7f/1e898554aa4edc680f3b43bf47b2aa537186f3
+      1 git/objects/7e/7cac4a95651c3d9092c0647764662f8e40ebf9
+      1 git/objects/7c/d73e00e366f03cbf06bdcd90cf839834cc3ef9
+      1 git/objects/7b/2024014ad08096b285a9353c7b535931ae9048
+      1 git/objects/7a/62ff73b4c746eba0a4b800f407e9ef3970b9b7
+      1 git/objects/77/55f004c381fa3185017854b066d76a67deb4e8
+      1 git/objects/75/6477b4cf3def512e6d9db1a0c79c3eb5134632
+      1 git/objects/74/f91847f27b95637990e37164eb57de6a22fe36
+      1 git/objects/74/a31aa08adf5df3c338eb952c2254b8a39c9435
+      1 git/objects/73/37a031376782021bb6970405d1ceeaeee28116
+      1 git/objects/72/c448e1d697cea2c9543cc662a9f8ad2c40583e
+      1 git/objects/71/e9b79cdb4f1b252516fb87ee77c78a25181e23
+      1 git/objects/71/e6d9e0a9657dc5b87411316e717253c3154539
+      1 git/objects/71/a0ae6359e8db3b3da87078f06c5ad2ee5e82e2
+      1 git/objects/71/43e87fd2f1344ad8a1bc89e3b316e98de19643
+      1 git/objects/6f/57b2bcdd1885a3f84167192c2874ef7d43fe61
+      1 git/objects/6f/51ec2ca950c4c53b9251e6feb9ff3a0f67b8c9
+      1 git/objects/6d/fb9dbe375735b48a4708c981dc806c8680b5ea
+      1 git/objects/6d/70257c7f56df99c8ffcc63227f40c72739b064
+      1 git/objects/68/47706638a473dc25d7cee1753ba609bedb7f51
+      1 git/objects/66/5bcc1a9796ee7288cd49b348288c4bee469e3e
+      1 git/objects/61/5557617651dc6ad45071a4f493f78092a0959d
+      1 git/objects/61/06b75e2be2e5e263a863ff14cb1c08fe647d28
+      1 git/objects/60/aa4ecc1307039429f23e977fbd3c3381a4f8e6
+      1 git/objects/5f/c7c39b150cd1fae977796116a3573dbbddbb46
+      1 git/objects/5e/fff8a0e693f1a49c8e332598a49a49d570e9d8
+      1 git/objects/5e/2e645c1ae124da3b5a8115646bb359d3403449
+      1 git/objects/5d/cd1cdfd2914f838a5b3c2f44f950634dc38d39
+      1 git/objects/5b/9d26a74fcc54144c3c607e4180e79d69fffbbe
+      1 git/objects/5b/6a36bc73785d2d5454dde838f6bcc8dad52230
+      1 git/objects/59/447606da8fccf1310329bc7856e4bde071b5e8
+      1 git/objects/56/febea80a6b6e8f4b7fa73e4b071f94c59afaa0
+      1 git/objects/56/c437b9b7acb76284e54ca56e02374aac6338f5
+      1 git/objects/55/abf0cda410aac334bba8c75fd2bc463d2dc126
+      1 git/objects/55/565a7be08e0c92559c10bb125aa883adcf5f85
+      1 git/objects/53/8bd020eb01b673c2d540d1bb7c9abfd8add438
+      1 git/objects/53/6a9e63f19a5e05c2b2d179ba1f8868c10de170
+      1 git/objects/52/40ed7143f345c392b51ecb60baaefe8d40ea9a
+      1 git/objects/50/c8ea6dd07eb841a1ac7f2660c99902840a771a
+      1 git/objects/50/0580747aaead730a55d1dbccdb6b2c9863c0ca
+      1 git/objects/4f/72876e9cd251a73f93bc0f94df203658113cb4
+      1 git/objects/4f/62bf952d1d343416c83f7567eb2fd9ff3ea8ff
+      1 git/objects/4f/2a1782bd27f0b6035d5d8182eb279d8a928e7f
+      1 git/objects/4a/f4a5116309a8c5b749d237669cd0f06c1619e1
+      1 git/objects/4a/85d7ec4580bac695d893b2152c901d4672e710
+      1 git/objects/4a/647a85f5351c10498b65334947f9d1179565a5
+      1 git/objects/49/7d07df886b1def6c257aabd56bf2b7e7dafa4e
+      1 git/objects/47/724e04879373df1b10249ff17057ea13df201d
+      1 git/objects/45/8a85b354bbfda0aefa3942dba7c2be64e2fb79
+      1 git/objects/45/5b61cc7e0e520b572b5888bb0b8e833595dfd8
+      1 git/objects/43/d035a55a92771797ce1fc9bcf47a69c5f8822c
+      1 git/objects/43/b4a4f7f96224dfa14881d622a33b997352e86d
+      1 git/objects/42/a87ba8c533d153af027cd10d924a3c29d154c5
+      1 git/objects/42/40e003cee205e25a8d9b04ef7ac60ef859a0b3
+      1 git/objects/40/898ac903f44b46d3910d1eae95058d85764b7a
+      1 git/objects/3f/0c3c1c9e90a1bcc6fc2380aa174029c6987e3e
+      1 git/objects/3f/00abe79066ba0e755c073b8b7663dba7cb1a29
+      1 git/objects/3e/f82c8ffdb4a0e210ed6a26c432be02512d5c1f
+      1 git/objects/38/7cfbf7fe42a8193745e80dc8a73ced1f6dc570
+      1 git/objects/36/486ae85a245a4a67dd7bd80bb6ab955c544586
+      1 git/objects/34/fc5a21e53bb5d673999088bc0eeff0b975204c
+      1 git/objects/32/68ad35522db44f322a0f89defd060b0a67ed1d
+      1 git/objects/30/9ceced17acd1b123bfaf018544d6c9de7377f2
+      1 git/objects/30/3f84790250cf89a0b9f26270a72e4e42063da2
+      1 git/objects/2f/62d82cdfa7fe0978d628978dbfc77094994530
+      1 git/objects/2c/07da44810f54d2f51cc9ea23d2b2b5e4167139
+      1 git/objects/2b/0f6ad7f55797693f873b9a92cf6baf4a42639e
+      1 git/objects/2a/2580d95acb0a8641739cb891b4b4b06b3952b9
+      1 git/objects/28/84fe292ceb5b240661204de3dc8b62ab037cd3
+      1 git/objects/27/f7b3079b19b58f6fdbb108251c125f78b7d707
+      1 git/objects/27/e7496bf7261c022c55a618d64d24e6e9bc4264
+      1 git/objects/27/09c67935902686b9be6ac088258eaf2e9bc2f8
+      1 git/objects/26/ecb5f267b6475fd9b66ad922ceb5de0b033673
+      1 git/objects/26/74a8bf4803be3af1005c5049ac09c454a522d7
+      1 git/objects/22/6f570be86409a335859d3c5ced451b14461194
+      1 git/objects/1e/417c76fa2057092c8f1b75135123543badc21c
+      1 git/objects/1e/15c8c8ee2d9026a381856a8a00aed3acf9be35
+      1 git/objects/1c/2fda565b94d0f2b94cb65ba7cca866e7a25478
+      1 git/objects/1b/a63554772db6ce5d840bb82b032e09a72f7ed7
+      1 git/objects/1b/310608e565268fdde4c9b78473f109a509c88d
+      1 git/objects/17/67ac7bbc592423429ca822dc66a814c1fb2776
+      1 git/objects/15/fa57e7f6d3cd5713978f1354c794fc200c86d1
+      1 git/objects/15/4a7795593b0f85503f300b046cb008f7cc47b2
+      1 git/objects/12/cba1778df2e65d9a6ee4c32700acbaf3314229
+      1 git/objects/10/146e9298119c1bd114e232616295b1540737fe
+      1 git/objects/0e/924cb1cfe3f1709b19b2b98d282d27d255b01e
+      1 git/objects/09/2439ad6ad9df9b52dc9c1d70c6954fb6c069d3
+      1 git/objects/08/1bad6fa92fb82bffbef17b0a2b80f06a8a2ef2
+      1 git/objects/07/d50fc74218037b6cba68f9eb315e5f16a987c7
+      1 git/objects/06/f6363ffd5e8095ee8cc41b45966ce0c817d370
+      1 git/objects/06/0ff08fdc24a2a4e277b5867be54cd878354245
+      1 git/objects/03/43c52b8614de780c939b163de2dda12414b195
+      1 git/objects/00/5cfe5277f7c480881bd3528b0e82d63a781637
+      1 git/logs/refs/remotes/origin/page-fault-handler
+      1 git/logs/refs/remotes/origin/main
+      1 git/logs/refs/remotes/origin/m7-tlb-simulation
+      1 git/logs/refs/remotes/origin/m6-inverted-page-table
+      1 git/logs/refs/remotes/origin/m5-n-level-paging
+      1 git/logs/refs/remotes/origin/m4-multilevel-paging
+      1 git/logs/refs/remotes/origin/m3-physical-memory
+      1 git/logs/refs/remotes/origin/m2-big-page-table
+      1 git/logs/refs/heads/refactor-structure
+      1 git/logs/refs/heads/main
+      1 git/logs/refs/heads/m7-tlb-simulation
+      1 git/logs/refs/heads/m6-inverted-page-table
+      1 git/logs/refs/heads/m5-n-level-paging
+      1 git/logs/HEAD
+      1 git/info/exclude
+      1 git/index
+      1 git/description
+      1 git/config
+      1 git/ORIG_HEAD
+      1 git/HEAD
+      1 git/FETCH_HEAD
+      1 git/COMMIT_EDITMSG
+      1 cmake/api/v1/query/toolchains-v1
+      1 cmake/api/v1/query/codemodel-v2
+      1 cmake/api/v1/query/cmakeFiles-v1
+      1 cmake/api/v1/query/cache-v2
+      1 check_cache
+      1 c
+      1 /main
+
+💻 C/C++ SOURCE FILES:
+-----------------------------------
+./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c
+./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/CMakeCXXCompilerId.cpp
+./milestones/M3_Linear_Demand_Paging/Linear_Demand_Paging_RAM.cpp
+./milestones/M4_MultiLevel_Paging/MultiLevel_Paging.cpp
+./milestones/M5_Generic_N_Level_Paging/Generic_Paging_64bit.cpp
+./milestones/M6_Inverted_Page_Table/Inverted_Page_Table.cpp
+./src/main.cpp
+
+📝 DOCUMENTATION FILES:
+-----------------------------------
+./CMakeLists.txt
+./README.md
+./cmake-build-debug/CMakeCache.txt
+./cmake-build-debug/CMakeFiles/TargetDirectories.txt
+./cmake-build-debug/CMakeFiles/clion-Debug-log.txt
+./cmake-build-debug/CMakeFiles/clion-environment.txt
+./docs/M1.md
+./docs/M2.md
+./docs/architecture.md
+./docs/memory_concepts.md
+./docs/milestones.md
+./inputs/input.txt
+./milestones/M3_Linear_Demand_Paging/README.md
+./milestones/M3_Linear_Demand_Paging/input.txt
+./milestones/M4_MultiLevel_Paging/README.md
+./milestones/M4_MultiLevel_Paging/input.txt
+./milestones/M5_Generic_N_Level_Paging/README.md
+./milestones/M5_Generic_N_Level_Paging/input.txt
+./milestones/M6_Inverted_Page_Table/README.md
+./milestones/M6_Inverted_Page_Table/input.txt
+./repo_analysis.txt
+./think.txt
+
+📖 CURRENT README CONTENT:
+-----------------------------------
+# Advanced Paging Simulator
+
+> A high-performance, educational simulation of Operating System memory management, featuring Multi-Level and Inverted Page Table implementations.
+
+## 📖 Overview
+This project simulates the hardware/software interface of an MMU (Memory Management Unit). Unlike simple allocators, this simulator handles complex virtual memory challenges including **hierarchical translation**, **demand paging**, and **page replacement policies**.
+
+It is designed to demonstrate deep systems knowledge:
+* **Virtualization:** Decoupling logical addresses from physical RAM.
+* **Optimization:** Comparing Linear vs. Multi-Level vs. Inverted tables.
+* **Algorithm Design:** Handling page faults and memory constraints efficiently.
+
+---
+
+## 🏗️ Repository Structure
+
+| Directory | Content |
+| :--- | :--- |
+| `milestones/` | Core implementations separated by complexity (M3 - M6). |
+| `src/` | Shared entry points and driver code. |
+| `inputs/` | Memory trace files used for simulation benchmarks. |
+| `docs/` | Technical documentation and architectural decisions. |
+
+---
+
+## 🚀 Key Implementations
+
+### 1. Linear Demand Paging (M3)
+The foundational implementation using a direct array map. Simulates basic validity checks and physical frame allocation.
+
+### 2. Multi-Level Paging (M4 & M5)
+Implements a Page Directory structure to handle sparse address spaces. M5 generalizes this to **N-levels**, allowing dynamic configuration of the page table depth.
+
+### 3. Inverted Page Table (M6)
+A space-efficient approach that scales with physical memory rather than virtual address space, using hashing to map frames.
+
+---
+
+## 🛠️ Usage
+
+To run a specific milestone simulation (e.g., M4):
+
+```bash
+cd milestones/M4_MultiLevel_Paging
+# Ensure your CMake or Compile command points to the input correctly
+./main ../../inputs/input.txt
+```
+
+---
+
+## 📚 Documentation
+* [System Architecture](docs/architecture.md)
+* [Memory Theory & Concepts](docs/memory_concepts.md)
+* [Development Roadmap](docs/milestones.md)
+
+---
+**License:** MIT
+
+⚖️ LICENSE FILE:
+-----------------------------------
+❌ No LICENSE file found
+
+🚫 GITIGNORE STATUS:
+-----------------------------------
+✅ .gitignore exists
+think.txt
+cmake-build-debug/
+main
+.DS_Store
+cmake-build-debug/
+
+📚 EXISTING DOC FOLDERS:
+-----------------------------------
+./docs
+
+🎯 MILESTONE-RELATED CONTENT:
+-----------------------------------
+./docs/milestones.md
+./milestones
+./milestones/M3_Linear_Demand_Paging
+./milestones/M3_Linear_Demand_Paging/Linear_Demand_Paging_RAM.cpp
+./milestones/M3_Linear_Demand_Paging/README.md
+./milestones/M3_Linear_Demand_Paging/input.txt
+./milestones/M4_MultiLevel_Paging
+./milestones/M4_MultiLevel_Paging/MultiLevel_Paging.cpp
+./milestones/M4_MultiLevel_Paging/README.md
+./milestones/M4_MultiLevel_Paging/input.txt
+./milestones/M5_Generic_N_Level_Paging
+./milestones/M5_Generic_N_Level_Paging/Generic_Paging_64bit.cpp
+./milestones/M5_Generic_N_Level_Paging/README.md
+./milestones/M5_Generic_N_Level_Paging/input.txt
+./milestones/M6_Inverted_Page_Table
+./milestones/M6_Inverted_Page_Table/Inverted_Page_Table.cpp
+./milestones/M6_Inverted_Page_Table/README.md
+./milestones/M6_Inverted_Page_Table/input.txt
+
+🔨 EXECUTABLES & BUILD ARTIFACTS:
+-----------------------------------
+./.git/COMMIT_EDITMSG
+./.git/config
+./.git/description
+./.git/FETCH_HEAD
+./.git/HEAD
+./.git/hooks/applypatch-msg.sample
+./.git/hooks/commit-msg.sample
+./.git/hooks/fsmonitor-watchman.sample
+./.git/hooks/post-update.sample
+./.git/hooks/pre-applypatch.sample
+./.git/hooks/pre-commit.sample
+./.git/hooks/pre-merge-commit.sample
+./.git/hooks/pre-push.sample
+./.git/hooks/pre-rebase.sample
+./.git/hooks/pre-receive.sample
+./.git/hooks/prepare-commit-msg.sample
+./.git/hooks/push-to-checkout.sample
+./.git/hooks/update.sample
+./.git/index
+./.git/info/exclude
+./.git/logs/HEAD
+./.git/logs/refs/heads/m5-n-level-paging
+./.git/logs/refs/heads/m6-inverted-page-table
+./.git/logs/refs/heads/m7-tlb-simulation
+./.git/logs/refs/heads/main
+./.git/logs/refs/heads/refactor-structure
+./.git/logs/refs/remotes/origin/m2-big-page-table
+./.git/logs/refs/remotes/origin/m3-physical-memory
+./.git/logs/refs/remotes/origin/m4-multilevel-paging
+./.git/logs/refs/remotes/origin/m5-n-level-paging
+./.git/logs/refs/remotes/origin/m6-inverted-page-table
+./.git/logs/refs/remotes/origin/m7-tlb-simulation
+./.git/logs/refs/remotes/origin/main
+./.git/logs/refs/remotes/origin/page-fault-handler
+./.git/objects/00/5cfe5277f7c480881bd3528b0e82d63a781637
+./.git/objects/03/43c52b8614de780c939b163de2dda12414b195
+./.git/objects/06/0ff08fdc24a2a4e277b5867be54cd878354245
+./.git/objects/06/f6363ffd5e8095ee8cc41b45966ce0c817d370
+./.git/objects/07/d50fc74218037b6cba68f9eb315e5f16a987c7
+./.git/objects/08/1bad6fa92fb82bffbef17b0a2b80f06a8a2ef2
+./.git/objects/09/2439ad6ad9df9b52dc9c1d70c6954fb6c069d3
+./.git/objects/0e/924cb1cfe3f1709b19b2b98d282d27d255b01e
+./.git/objects/10/146e9298119c1bd114e232616295b1540737fe
+./.git/objects/12/cba1778df2e65d9a6ee4c32700acbaf3314229
+./.git/objects/15/4a7795593b0f85503f300b046cb008f7cc47b2
+./.git/objects/15/fa57e7f6d3cd5713978f1354c794fc200c86d1
+./.git/objects/17/67ac7bbc592423429ca822dc66a814c1fb2776
+./.git/objects/1b/310608e565268fdde4c9b78473f109a509c88d
+./.git/objects/1b/a63554772db6ce5d840bb82b032e09a72f7ed7
+./.git/objects/1c/2fda565b94d0f2b94cb65ba7cca866e7a25478
+./.git/objects/1e/15c8c8ee2d9026a381856a8a00aed3acf9be35
+./.git/objects/1e/417c76fa2057092c8f1b75135123543badc21c
+./.git/objects/22/6f570be86409a335859d3c5ced451b14461194
+./.git/objects/26/74a8bf4803be3af1005c5049ac09c454a522d7
+./.git/objects/26/ecb5f267b6475fd9b66ad922ceb5de0b033673
+./.git/objects/27/09c67935902686b9be6ac088258eaf2e9bc2f8
+./.git/objects/27/e7496bf7261c022c55a618d64d24e6e9bc4264
+./.git/objects/27/f7b3079b19b58f6fdbb108251c125f78b7d707
+./.git/objects/28/84fe292ceb5b240661204de3dc8b62ab037cd3
+./.git/objects/2a/2580d95acb0a8641739cb891b4b4b06b3952b9
+./.git/objects/2b/0f6ad7f55797693f873b9a92cf6baf4a42639e
+./.git/objects/2c/07da44810f54d2f51cc9ea23d2b2b5e4167139
+./.git/objects/2f/62d82cdfa7fe0978d628978dbfc77094994530
+./.git/objects/30/3f84790250cf89a0b9f26270a72e4e42063da2
+./.git/objects/30/9ceced17acd1b123bfaf018544d6c9de7377f2
+./.git/objects/32/68ad35522db44f322a0f89defd060b0a67ed1d
+./.git/objects/34/fc5a21e53bb5d673999088bc0eeff0b975204c
+./.git/objects/36/486ae85a245a4a67dd7bd80bb6ab955c544586
+./.git/objects/38/7cfbf7fe42a8193745e80dc8a73ced1f6dc570
+./.git/objects/3e/f82c8ffdb4a0e210ed6a26c432be02512d5c1f
+./.git/objects/3f/00abe79066ba0e755c073b8b7663dba7cb1a29
+./.git/objects/3f/0c3c1c9e90a1bcc6fc2380aa174029c6987e3e
+./.git/objects/40/898ac903f44b46d3910d1eae95058d85764b7a
+./.git/objects/42/40e003cee205e25a8d9b04ef7ac60ef859a0b3
+./.git/objects/42/a87ba8c533d153af027cd10d924a3c29d154c5
+./.git/objects/43/b4a4f7f96224dfa14881d622a33b997352e86d
+./.git/objects/43/d035a55a92771797ce1fc9bcf47a69c5f8822c
+./.git/objects/45/5b61cc7e0e520b572b5888bb0b8e833595dfd8
+./.git/objects/45/8a85b354bbfda0aefa3942dba7c2be64e2fb79
+./.git/objects/47/724e04879373df1b10249ff17057ea13df201d
+./.git/objects/49/7d07df886b1def6c257aabd56bf2b7e7dafa4e
+./.git/objects/4a/647a85f5351c10498b65334947f9d1179565a5
+./.git/objects/4a/85d7ec4580bac695d893b2152c901d4672e710
+./.git/objects/4a/f4a5116309a8c5b749d237669cd0f06c1619e1
+./.git/objects/4f/2a1782bd27f0b6035d5d8182eb279d8a928e7f
+./.git/objects/4f/62bf952d1d343416c83f7567eb2fd9ff3ea8ff
+./.git/objects/4f/72876e9cd251a73f93bc0f94df203658113cb4
+./.git/objects/50/0580747aaead730a55d1dbccdb6b2c9863c0ca
+./.git/objects/50/c8ea6dd07eb841a1ac7f2660c99902840a771a
+./.git/objects/52/40ed7143f345c392b51ecb60baaefe8d40ea9a
+./.git/objects/53/6a9e63f19a5e05c2b2d179ba1f8868c10de170
+./.git/objects/53/8bd020eb01b673c2d540d1bb7c9abfd8add438
+./.git/objects/55/565a7be08e0c92559c10bb125aa883adcf5f85
+./.git/objects/55/abf0cda410aac334bba8c75fd2bc463d2dc126
+./.git/objects/56/c437b9b7acb76284e54ca56e02374aac6338f5
+./.git/objects/56/febea80a6b6e8f4b7fa73e4b071f94c59afaa0
+./.git/objects/59/447606da8fccf1310329bc7856e4bde071b5e8
+./.git/objects/5b/6a36bc73785d2d5454dde838f6bcc8dad52230
+./.git/objects/5b/9d26a74fcc54144c3c607e4180e79d69fffbbe
+./.git/objects/5d/cd1cdfd2914f838a5b3c2f44f950634dc38d39
+./.git/objects/5e/2e645c1ae124da3b5a8115646bb359d3403449
+./.git/objects/5e/fff8a0e693f1a49c8e332598a49a49d570e9d8
+./.git/objects/5f/c7c39b150cd1fae977796116a3573dbbddbb46
+./.git/objects/60/aa4ecc1307039429f23e977fbd3c3381a4f8e6
+./.git/objects/61/06b75e2be2e5e263a863ff14cb1c08fe647d28
+./.git/objects/61/5557617651dc6ad45071a4f493f78092a0959d
+./.git/objects/66/5bcc1a9796ee7288cd49b348288c4bee469e3e
+./.git/objects/68/47706638a473dc25d7cee1753ba609bedb7f51
+./.git/objects/6d/70257c7f56df99c8ffcc63227f40c72739b064
+./.git/objects/6d/fb9dbe375735b48a4708c981dc806c8680b5ea
+./.git/objects/6f/51ec2ca950c4c53b9251e6feb9ff3a0f67b8c9
+./.git/objects/6f/57b2bcdd1885a3f84167192c2874ef7d43fe61
+./.git/objects/71/43e87fd2f1344ad8a1bc89e3b316e98de19643
+./.git/objects/71/a0ae6359e8db3b3da87078f06c5ad2ee5e82e2
+./.git/objects/71/e6d9e0a9657dc5b87411316e717253c3154539
+./.git/objects/71/e9b79cdb4f1b252516fb87ee77c78a25181e23
+./.git/objects/72/c448e1d697cea2c9543cc662a9f8ad2c40583e
+./.git/objects/73/37a031376782021bb6970405d1ceeaeee28116
+./.git/objects/74/a31aa08adf5df3c338eb952c2254b8a39c9435
+./.git/objects/74/f91847f27b95637990e37164eb57de6a22fe36
+./.git/objects/75/6477b4cf3def512e6d9db1a0c79c3eb5134632
+./.git/objects/77/55f004c381fa3185017854b066d76a67deb4e8
+./.git/objects/7a/62ff73b4c746eba0a4b800f407e9ef3970b9b7
+./.git/objects/7b/2024014ad08096b285a9353c7b535931ae9048
+./.git/objects/7c/d73e00e366f03cbf06bdcd90cf839834cc3ef9
+./.git/objects/7e/7cac4a95651c3d9092c0647764662f8e40ebf9
+./.git/objects/7f/1e898554aa4edc680f3b43bf47b2aa537186f3
+./.git/objects/7f/a382cc88d96d6772259942ba0f88dc0a6a6fba
+./.git/objects/80/b4f6609ee38bcdd0abcfc854c6b01ed9844854
+./.git/objects/81/a6fd3a765ffbb1b2633c6bce4f238d044d72bf
+./.git/objects/82/37a892d1ca534f9fca3063fb6ef1c70c9f71ef
+./.git/objects/86/16542084e70fc25ba47279814588e61b34f670
+./.git/objects/86/3fc7fa32c8fc3d31c106f7f49109263c74d19b
+./.git/objects/88/3120b3d26790a6bc3906be2a29e38282c9971c
+./.git/objects/8c/69fb7fbbb212a33fb426ae7552a62f1b221f70
+./.git/objects/8c/9263729e73b0c26934e62e970506e125a0a08a
+./.git/objects/8c/b7a0b3bb67bff88d499423599d5d3666394b7c
+./.git/objects/8c/bbcf0d9d6566c118263c0e7455f996a2c8e641
+./.git/objects/8d/602e2aa54e636ebe3aec6646b63adad78e2787
+./.git/objects/8d/63d59e2a1235ef19be578ee74b0247cd6a87e1
+./.git/objects/8e/d58d9ad7dafac06a1d1fec199831b71c2a6065
+./.git/objects/91/6a4989a52007bac34a543e0c67ec5eb3010649
+./.git/objects/91/976252c4db0ab77f18f5de927406cc1e90a92e
+./.git/objects/94/a25f7f4cb416c083d265558da75d457237d671
+./.git/objects/96/61ac713428efbad557d3ba3a62216b5bb7d226
+./.git/objects/97/ad7552222ecbbb191426a986c914e6bd5c1675
+./.git/objects/97/f6fd69d48c8a97f293b6b55e67cd6eb6a3ec8b
+./.git/objects/98/144daeaf682e1dbd4af65eec1a0273bc9b313d
+./.git/objects/99/38610c103628489113d65515a4c26e391347b4
+./.git/objects/9c/dbc2812fe153bb52c332dd8b9f9a325208361c
+./.git/objects/9f/d60a4c5d9f104a59438c3ecb472af46d0d5c5e
+./.git/objects/a4/332b1e285a607b25145eea92a756af838ecc90
+./.git/objects/a5/6a32da86e82defbd5174c4a164725af01debfa
+./.git/objects/a6/9c54d03f5534be09d1f3fd7f9d868eda61294d
+./.git/objects/a8/9998da40fe431e32b8732b796b46854184d7b6
+./.git/objects/aa/1aa981aefb96ed252fb7dd746ec45c424e6e88
+./.git/objects/aa/daacd05902f597cb7a554119dfc9986a637752
+./.git/objects/ac/8e298adf180dc14e32702600c0737af7e4a92c
+./.git/objects/ac/a1009c704702086f16449920f817b74044a219
+./.git/objects/ad/17790f66f8fb6a193f9ef5160b38f33f393085
+./.git/objects/ae/cfc8da9cdd26544dfe9654b8dabe5926e72c62
+./.git/objects/b3/49a6a10ff83576de49fd492f0ae811a38e07e2
+./.git/objects/b3/a7e62cd988bc2e638ca8a71ad377875e333c18
+./.git/objects/b4/5f00c966ca020e9aecbe807156c9b0774738ec
+./.git/objects/b5/53365103e502186f48f72dcdc1bcc0e67e14ce
+./.git/objects/b6/b6129732e7048535855ee4876e206bfecff2aa
+./.git/objects/b8/43dcbf5bd071136b831e513e0245710f7c6f10
+./.git/objects/bd/185742ea65c86683905e4e3d9f4cf9f48e6dcf
+./.git/objects/be/cedd71ea9d3e49b0e048b43eb45ee0af70bdf9
+./.git/objects/c0/380b6988b330d1d6ea9e756ac5a09838162445
+./.git/objects/c1/4c2c69d138c57f15f81716f94e87aea91ec7e4
+./.git/objects/c1/a875fd36c7e530d91b9f3b51789f385dd8f94e
+./.git/objects/c2/40b5470b08a911e0c6a8b4fa0d89fe869a3edc
+./.git/objects/c2/d3f0d4b3652abdd6c05c95c74814f9588aa137
+./.git/objects/c2/f4e4a6c9620a9a3f527b27ee548a1f6ed601b2
+./.git/objects/c7/0a2ada7dcadd9ce229e34e074f46d90ae5984f
+./.git/objects/c9/0f5474de3139aa7d812de6143c5dec5154b258
+./.git/objects/c9/658a85ea94e6437c6d0dedd95fd59bbdb7528a
+./.git/objects/cc/49f85cb035799c5cbd5b2337b22cd78937d63b
+./.git/objects/cd/264690fe145669bc8fffaf9273987324b576c4
+./.git/objects/cd/69d223b0d4165670be6e24076c3ecd0ca14e70
+./.git/objects/ce/e3be0ce6ca08116dff37aa158e4b68d0a92c0f
+./.git/objects/d0/e03ab4cf77b2bfc914accf2d3561a53ebf1472
+./.git/objects/d1/4e4d01a54b14b004c1a998c50e326ec8c8ef18
+./.git/objects/d3/9c1d55ee1c99728dbdf8dce60f45e70e685ed6
+./.git/objects/d4/cda8ade1d91f35741690730aa64fd9fe5b07dc
+./.git/objects/d6/12aad8ae9b848645237804fe0f08b485648b09
+./.git/objects/dc/35d1cf1a94b58e5a3b2633267dca1f398c2f49
+./.git/objects/dc/b46f9d795561d51f7fd96a15a4431af4b20760
+./.git/objects/dd/09ff3d298d132fbd302766716028f2a201aadd
+./.git/objects/de/94d9a5110651c8ab4856703247fd18ea162afd
+./.git/objects/e2/dcc5cde7905dccd668e06b590d3b5deacc3d6d
+./.git/objects/e3/8965112d5d18a73a603e22bc2cfd343d95ff9a
+./.git/objects/e4/6b06e826a1da59e6a3f0acdbd79432b38a5a4d
+./.git/objects/e4/d5ef3120ed1faf9a7d09210d6bbd208ef44784
+./.git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+./.git/objects/e7/db95e1e387ffcda6dd1956688b84a423af3c6e
+./.git/objects/e8/9b5b61bbf41dbd4f721de82849a57c7ec8bbc1
+./.git/objects/e9/1a32e7e84ddb8b7a077a67c6d4548dcd573501
+./.git/objects/eb/3eeab9f6dfd3428f9d461d0bf5fdc9aa486dca
+./.git/objects/eb/794e9eb0da7efac0faf1a14b6a837193b66b55
+./.git/objects/ee/3821bec4cdb50791de5cbcccc9e044dde654a1
+./.git/objects/ee/cbf5d5fd8417694d8e5cb762dc4b4d3c369ec6
+./.git/objects/ef/d4c0255b7cbfaec102ae5be663d62b7244c07f
+./.git/objects/f0/56bd19929a81039003332896e01ec31e68c0c9
+./.git/objects/f0/8daa8c97d3eef00d0404ff6f1b76f656b8ff3b
+./.git/objects/f1/c67dfa2c86c2443504668370a9d70892a4671a
+./.git/objects/f5/2bc5059299bb1ab9a9f05a0522b3c9bb585ee4
+./.git/objects/f6/9348bd12217df28488785b2eb004e769f51428
+./.git/objects/f6/c9bac18aba06a0da6a8776eea2148868fbc51a
+./.git/objects/f7/52655f7dbdad702f99e574a20b0f4be2918d85
+./.git/objects/f8/41f8b7cf7a0591213652ba05ebf02315283840
+./.git/objects/f8/7347565a0628fc703ba7de48803efeb5d0557c
+./.git/objects/f8/d40b581ebf1739ef861e18374f1f50e08c08f6
+./.git/objects/fa/1d460a387a64abac9417d8c8ba90626479ef91
+./.git/objects/fb/5178a153353beb8dff440b47d0927920de6fe0
+./.git/objects/fc/f1ffbf627f31810e5c50ccec4f72ff2faa2665
+./.git/objects/fe/70858746612f1ac9acf11ee6ea07c32b30f0f0
+./.git/objects/ff/3ba3f2635e37db6b94cae4169217c548675177
+./.git/objects/ff/7f6faf4323eccc9f8187116ddfeb7090e1a89e
+./.git/objects/ff/d1bcc00b26be3df76aff699716daa71e6e3786
+./.git/ORIG_HEAD
+./.git/packed-refs
+./.git/refs/heads/m5-n-level-paging
+./.git/refs/heads/m6-inverted-page-table
+./.git/refs/heads/m7-tlb-simulation
+./.git/refs/heads/main
+./.git/refs/heads/refactor-structure
+./.git/refs/remotes/origin/m2-big-page-table
+./.git/refs/remotes/origin/m3-physical-memory
+./.git/refs/remotes/origin/m4-multilevel-paging
+./.git/refs/remotes/origin/m5-n-level-paging
+./.git/refs/remotes/origin/m6-inverted-page-table
+./.git/refs/remotes/origin/m7-tlb-simulation
+./.git/refs/remotes/origin/main
+./.git/refs/remotes/origin/page-fault-handler
+./.gitignore
+./.idea/.gitignore
+./.idea/misc.xml
+./.idea/modules.xml
+./.idea/paging.iml
+./.idea/vcs.xml
+./.idea/workspace.xml
+./analyze_repo.sh
+./cmake-build-debug/.cmake/api/v1/query/cache-v2
+./cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1
+./cmake-build-debug/.cmake/api/v1/query/codemodel-v2
+./cmake-build-debug/.cmake/api/v1/query/toolchains-v1
+./cmake-build-debug/.cmake/api/v1/reply/cache-v2-30c651af366ef96872d4.json
+./cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-011bcce1477a36a92a0f.json
+./cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-d511156fe40d7bdc03fb.json
+./cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json
+./cmake-build-debug/.cmake/api/v1/reply/index-2025-12-04T06-25-04-0853.json
+./cmake-build-debug/.cmake/api/v1/reply/target-paging-Debug-c2e3e86ed7b161127d60.json
+./cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-392245e161730afd725b.json
+./cmake-build-debug/build.ninja
+./cmake-build-debug/CMakeCache.txt
+./cmake-build-debug/CMakeFiles/3.27.8/CMakeCCompiler.cmake
+./cmake-build-debug/CMakeFiles/3.27.8/CMakeCXXCompiler.cmake
+./cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin
+./cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin
+./cmake-build-debug/CMakeFiles/3.27.8/CMakeRCCompiler.cmake
+./cmake-build-debug/CMakeFiles/3.27.8/CMakeSystem.cmake
+./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/a.exe
+./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c
+./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/a.exe
+./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/CMakeCXXCompilerId.cpp
+./cmake-build-debug/CMakeFiles/clion-Debug-log.txt
+./cmake-build-debug/CMakeFiles/clion-environment.txt
+./cmake-build-debug/CMakeFiles/cmake.check_cache
+./cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml
+./cmake-build-debug/CMakeFiles/rules.ninja
+./cmake-build-debug/CMakeFiles/TargetDirectories.txt
+./cmake-build-debug/cmake_install.cmake
+./cmake-build-debug/Testing/Temporary/LastTest.log
+./CMakeLists.txt
+./docs/architecture.md
+./docs/M1.md
+./docs/M2.md
+./docs/memory_concepts.md
+./docs/milestones.md
+./inputs/input.txt
+./main
+./milestones/M3_Linear_Demand_Paging/input.txt
+./milestones/M3_Linear_Demand_Paging/Linear_Demand_Paging_RAM.cpp
+./milestones/M3_Linear_Demand_Paging/README.md
+./milestones/M4_MultiLevel_Paging/input.txt
+./milestones/M4_MultiLevel_Paging/MultiLevel_Paging.cpp
+./milestones/M4_MultiLevel_Paging/README.md
+./milestones/M5_Generic_N_Level_Paging/Generic_Paging_64bit.cpp
+./milestones/M5_Generic_N_Level_Paging/input.txt
+./milestones/M5_Generic_N_Level_Paging/README.md
+./milestones/M6_Inverted_Page_Table/input.txt
+./milestones/M6_Inverted_Page_Table/Inverted_Page_Table.cpp
+./milestones/M6_Inverted_Page_Table/README.md
+./README.md
+./repo_analysis.txt
+./src/main.cpp
+./think.txt
+
+📈 CODE STATISTICS:
+-----------------------------------
+Total C source files:
+1
+Total header files:
+0
+Total lines of C code:
+866 ./cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c
+
+🔄 GIT STATUS:
+-----------------------------------
+On branch refactor-structure
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	analyze_repo.sh
+	repo_analysis.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+📜 RECENT COMMITS:
+-----------------------------------
+5efff8a refactor: restructure project into milestones and update documentation
+10146e9 feat(tlb): implement software TLB with LRU eviction policy
+a89998d Start building TLB simulator
+b843dcb Update README with milestone progress and philosophy
+2674a8b docs: update readme with links to completed M5 and M6
+cee3be0 Merge pull request #18 from Mido191020/m6-inverted-page-table
+081bad6 docs: add human-readable explanation for Inverted Page Table
+cd26469 Remove project highlights from README
+458a85b Revise README for improved clarity and detail
+55565a7 Merge pull request #17 from Mido191020/m5-n-level-paging
+
+🧪 TEST FILES:
+-----------------------------------
+./cmake-build-debug/Testing/Temporary/LastTest.log
+
+======================================
+✅ ANALYSIS COMPLETE
+======================================
+
+Next steps:
+1. Review the output above
+2. Share this information
+3. We'll create the new structure together
+
