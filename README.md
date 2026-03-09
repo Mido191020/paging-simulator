@@ -1,107 +1,78 @@
+# OS Paging Simulator
 
-# 📄 Paging Simulator (OS Memory Management)
+A comprehensive C++ simulator modeled after the Memory Management Unit (MMU) of standard modern CPU architectures. This project explores and mimics the behavior of virtual-to-physical address translation through various historical and modern paging schemes.
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Language](https://img.shields.io/badge/language-C%2B%2B-00599C.svg)
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
+## Project Overview
 
-## 📖 Overview
+The OS Paging Simulator aims to unpack the "black box" of operating system memory virtualization. It supports a fully operational Translation Lookaside Buffer (TLB) paired with both Inverted Page Tables (IPT) and hierarchical Multi-Level Paging schemes. Furthermore, it manages simulated RAM pressure using an optimized Least-Recently-Used (LRU) algorithm.
 
-A **modular simulation** of an Operating System’s **Memory Management Unit (MMU)**.  
-This project demonstrates how modern kernels handle **virtual memory**, with a focus on:
+## Architecture
 
-- Paging
-- Address Translation
-- Page Replacement Algorithms
+The repository is branched into simulation milestones:
 
-> **Current milestone:** **M3 – Least Recently Used (LRU)**
-
----
-
-## 🚀 Key Features
-
-- **Virtual Memory Simulation**  
-  Maps Virtual Page Numbers (VPNs) to Physical Frames.
-
-- **Page Replacement Algorithms**
-  - ✅ **LRU (Least Recently Used)** using timestamp-based tracking
-  - 🔜 FIFO, Clock, Optimal
-
-- **Console Visualizer**  
-  Real-time output showing:
-  - Page hits
-  - Page misses
-  - Memory frame state
-
-- **Trace Generation**  
-  Simulates realistic memory access patterns:
-  - Hot pages
-  - Cold pages
-
----
-
-## 🛠️ Build & Run
-
-### Prerequisites
-
-- C++ Compiler (GCC or Clang)
-- CMake **3.10+**
-
-### Quick Start
-
-
-# Clone the repository
-git clone https://github.com/Mido191020/paging-simulator.git
-cd paging-simulator
-
-# Build the project
-cmake -S . -B build
-cmake --build build
-
-# Run the simulator
-./build/paging_sim
-
-
-
-## 📂 Project Structure
+- **Milestone 3 (IPT & TLB)**: Simulates an associatively cached translation layer. If the TLB misses, it invokes a hash-based Inverted Page Table. It utilizes collision-chaining and strict TLB LRU replacement.
+- **Milestone 4 (Multi-Level Paging)**: Simulates 32-bit `x86` hierarchical directory/table structures using explicit bit-shifting (10-bit / 10-bit / 12-bit). It also introduces "Reverse Mapped" physical frames to optimize Page Table Entry invalidations during deep memory evictions.
 
 ```text
-paging-simulator/
-├── src/            # Core simulator logic (MMU, page tables, replacement)
-├── docs/           # Technical documentation & architecture notes
-├── milestones/     # Archived milestones (M1–M6)
-├── tests/          # Unit tests
-└── input.txt       # Generated memory access traces
+      Virtual Address (32-bit)
+   [10-bit Dir] [10-bit Tab] [12-bit Off]
+         |            |            |
+         v            |            |
+  +---------------+   |            |
+  | PageDirectory |   |            |
+  +---------------+   |            |
+         | (Pointer)  |            |
+         v            v            |
+    +---------+ +------------+     |
+    |  Table  | | TableEntry |     |
+    +---------+ +------------+     |
+                      | (Frame #)  |
+                      v            v
+                +-----------------------+
+                |     Physical RAM      |
+                | (Reverse Map -> VPN)  |
+                +-----------------------+
 ```
 
----
+## Features
 
-## 🧠 Architecture
+- **Hierarchical Address Translation**: Bitwise parsing of 32-bit virtual addresses into Physical Frames and Offsets.
+- **Hardware Caching**: Simulates TLB Hit/Miss logic, improving subsequent lookup speeds dynamically.
+- **LRU Page Replacement**: Accurately tracks temporal access (using a `Global_System_Clock`) to evict the oldest frames when simulated RAM thresholds are exceeded.
+- **CLI Visualizer**: Real-time terminal output detailing hash-bucket chains, tree traversal, and Hit/Miss metrics.
 
-The simulator models a **demand-paging system**:
+## Technologies Used
 
-1. **CPU Request**
-   Generates a virtual address (VPN).
+- **Language**: C++17
+- **Build System**: CMake
 
-2. **MMU Lookup**
-   Checks the page table.
+## Installation
 
-3. **Hit**
-   Frame number is returned immediately.
+Clone the repository and compile using CMake.
 
-4. **Miss (Page Fault)**
+```bash
+git clone https://github.com/Mido191020/paging-simulator.git
+cd paging-simulator
+cmake .
+make
+```
 
-   * Page fault handler is invoked
-   * Free frame is used or a victim page is selected (LRU)
-   * Page table is updated
-   * Execution resumes
+## Usage
 
----
+The build process generates dual executables mirroring the project milestones:
 
-## 🤝 Contributing
+### 1. Inverted Page Table + TLB Simulator
 
-Contributions are welcome!
-Please read **`CONTRIBUTING.md`** for coding standards and pull request guidelines.
+```bash
+./paging_sim_m3
+```
 
----
+*Run this to access an interactive CLI menu allowing you to perform manual Store/Load operations or run automated batch scripts to witness TLB evictions.*
 
+### 2. Multi-Level Hierarchical Paging Simulator
+
+```bash
+./paging_sim_m4
+```
+
+*Executes an automated, deterministic simulation demonstrating memory capacity saturation, chronological LRU victim selection, and automated Page Table unlinking.*
