@@ -1,78 +1,87 @@
-# OS Paging Simulator
+# Paging Simulator
 
-A comprehensive C++ simulator modeled after the Memory Management Unit (MMU) of standard modern CPU architectures. This project explores and mimics the behavior of virtual-to-physical address translation through various historical and modern paging schemes.
-
-## Project Overview
-
-The OS Paging Simulator aims to unpack the "black box" of operating system memory virtualization. It supports a fully operational Translation Lookaside Buffer (TLB) paired with both Inverted Page Tables (IPT) and hierarchical Multi-Level Paging schemes. Furthermore, it manages simulated RAM pressure using an optimized Least-Recently-Used (LRU) algorithm.
-
-## Architecture
-
-The repository is branched into simulation milestones:
-
-- **Milestone 3 (IPT & TLB)**: Simulates an associatively cached translation layer. If the TLB misses, it invokes a hash-based Inverted Page Table. It utilizes collision-chaining and strict TLB LRU replacement.
-- **Milestone 4 (Multi-Level Paging)**: Simulates 32-bit `x86` hierarchical directory/table structures using explicit bit-shifting (10-bit / 10-bit / 12-bit). It also introduces "Reverse Mapped" physical frames to optimize Page Table Entry invalidations during deep memory evictions.
-
-```text
-      Virtual Address (32-bit)
-   [10-bit Dir] [10-bit Tab] [12-bit Off]
-         |            |            |
-         v            |            |
-  +---------------+   |            |
-  | PageDirectory |   |            |
-  +---------------+   |            |
-         | (Pointer)  |            |
-         v            v            |
-    +---------+ +------------+     |
-    |  Table  | | TableEntry |     |
-    +---------+ +------------+     |
-                      | (Frame #)  |
-                      v            v
-                +-----------------------+
-                |     Physical RAM      |
-                | (Reverse Map -> VPN)  |
-                +-----------------------+
-```
+A minimal C++ simulator of an Operating System's Memory Management Unit (MMU).
+It demonstrates virtual-to-physical address translation using an **Inverted Page Table (IPT)** backed by a hash table, a software **TLB** with LRU eviction, and demand-paging page faults.
 
 ## Features
 
-- **Hierarchical Address Translation**: Bitwise parsing of 32-bit virtual addresses into Physical Frames and Offsets.
-- **Hardware Caching**: Simulates TLB Hit/Miss logic, improving subsequent lookup speeds dynamically.
-- **LRU Page Replacement**: Accurately tracks temporal access (using a `Global_System_Clock`) to evict the oldest frames when simulated RAM thresholds are exceeded.
-- **CLI Visualizer**: Real-time terminal output detailing hash-bucket chains, tree traversal, and Hit/Miss metrics.
+- **Virtual memory simulation** — maps virtual page numbers (VPN) to physical frame numbers (PFN).
+- **Inverted Page Table** — one entry per physical frame, hashed by `(PID, VPN)`.
+- **TLB (fast path)** — small fully-associative cache with LRU replacement on miss.
+- **Page fault handler** — allocates a free frame on miss; reports `Out of RAM` when full.
+- **Visualizer** — prints TLB state, hash bucket lookup, and hit/miss per translation.
+- **Batch & interactive modes** — run a built-in trace or enter `W/R` commands manually.
 
-## Technologies Used
+## Architecture
 
-- **Language**: C++17
-- **Build System**: CMake
+```text
+                 CPU Request
+                      │
+                      ▼
+              ┌───────────────┐
+              │    TLB        │◄──── fast path (cached translations)
+              │  (LRU cache)  │
+              └───────────────┘
+                      │ miss
+                      ▼
+              ┌───────────────┐
+              │ Inverted Page │
+              │   Table (IPT) │◄── slow path: hash(PID, VPN)
+              └───────────────┘
+                      │ miss (page fault)
+                      ▼
+              ┌───────────────┐
+              │  Frame Alloc  │◄── allocate free frame or LRU evict
+              └───────────────┘
+                      │
+                      ▼
+              Physical Address = (PFN << 12) | offset
+```
 
-## Installation
-
-Clone the repository and compile using CMake.
+## Build & Run
 
 ```bash
-git clone https://github.com/Mido191020/paging-simulator.git
-cd paging-simulator
-cmake .
-make
+# configure + build
+cmake -S . -B build
+cmake --build build
+
+# run
+./build/paging_sim
+```
+
+Requires a C++17 compiler and CMake 3.10+.
+
+## Project Structure
+
+```
+paging-simulator/
+├── main.cpp        # single source: IPT + TLB + LRU simulator
+├── CMakeLists.txt  # build configuration
+├── README.md       # this file
+├── .gitignore      # ignores build/IDE artifacts
+└── examples/
+    └── input.txt   # sample memory-trace input
 ```
 
 ## Usage
 
-The build process generates dual executables mirroring the project milestones:
+On start you get a menu:
 
-### 1. Inverted Page Table + TLB Simulator
-
-```bash
-./paging_sim_m3
+```
+1. Run TLB/LRU Batch Test   - runs a built-in trace and prints hit/miss stats
+2. Interactive Mode         - enter Op (W/R), PID, VA(hex)
+3. Visualize Translation    - show TLB/IPT lookup steps for one address
+0. Exit
 ```
 
-*Run this to access an interactive CLI menu allowing you to perform manual Store/Load operations or run automated batch scripts to witness TLB evictions.*
+Interactive example:
 
-### 2. Multi-Level Hierarchical Paging Simulator
-
-```bash
-./paging_sim_m4
+```
+Enter Op (W/R), PID, VA(Hex): W 1 0x1000
+Value: A
+[RAM] PID 1 Stored 'A' at PA 0x1000
 ```
 
-*Executes an automated, deterministic simulation demonstrating memory capacity saturation, chronological LRU victim selection, and automated Page Table unlinking.*
+## License
+
+MIT
